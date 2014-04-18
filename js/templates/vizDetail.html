@@ -1,0 +1,23 @@
+<div id="viz-detail" class="dash-right-push">
+<a class="pull-right lang-fr" id="showDash"><i class="icon icon-hand-right"></i>A PROPOS</a>
+<a class="pull-right lang-ar" id="showDash"><i class="icon icon-hand-right"></i>حول الخريطة </a>
+<a class="pull-right lang-en" id="showDash"><i class="icon icon-hand-right"></i>ABOUT MAP</a>
+<a href="data/GLOBAL_DATA.xlsx" id="download" class="pull-right lang-fr">Télécharger les données</a>
+<a href="#2011"                 id="download" class="pull-right lang-ar">تحميل البيانات</a>
+<a href="data/GLOBAL_DATA.xlsx" id="download" class="pull-right lang-en">Download the DATA</a>
+<a onclick="history.back(-1)" id="back" class="pull-right lang-fr">&lt; RETOUR</a>
+<a onclick="history.back(-1)" id="back" class="pull-right lang-ar">رجوع &gt;</a>
+<a onclick="history.back(-1)" id="back" class="pull-right lang-en">&lt; BACK</a>
+<div id="map"></div>
+<div id="description-dash" class="dash-right dash-right-vertical dash-right-right">
+<h3><%= title %></h3>
+<h4><%= subtitle %></h4>
+<h3 class="<%= lang %>">Description</h3>
+<p><%= description %></p>
+<h3 class="<%= lang %>">About the data</h3>
+<p><%= about_data %></p>
+<h3 class="<%= lang %>">Methodology</h3>
+<p><%= methodology %></p>
+</div>
+<!--<div  id="overlay"></div>-->
+</div>

@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Tunisia Charts Draft</title>
+   <script src="https://www.google.com/jsapi"></script>
+   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+   <script src="jquery.csv-0.71.min.js"></script>
+   <script src="mehdi_charts.js"></script>
+   <script src="mehdi_charts_2.js"></script>
+      
+<!--google web font-->
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' type='text/css'>
+
+  <!--basic style sheets and scripts -->
+  
+  <link rel="stylesheet" media="screen" href="../css/bootstrap.min.css"/>
+  <!--link rel="stylesheet" media="screen" href="css/bootstrap-responsive.css"/-->
+  
+  <link href='//api.tiles.mapbox.com/mapbox.js/v1.4.2/mapbox.css' rel='stylesheet' />
+
+  <link rel="stylesheet" media="screen" href="../css/style.css"/>
+  <link rel="stylesheet" media="screen" href="../css/maps.css"/>
+
+   <script type="text/javascript" src="../js/lib/jquery.inview.min.js"></script>
+  <script type="text/javascript" src="../js/lib/scrollTo.min.js"></script>
+   <script type="text/javascript" src="../js/lib/classie.js"></script>
+
+  
+
+
+</head>
+<body style="background-color:#304458">
+
+<div id="header-inner" class="container" style="background-color:#304458" margin="0px !important">
+ 
+    <div class="row"> 
+      <div class="col-md-3"><a class="title" href="../#"><span class="logo">Tunisia Election Data</span></a>
+      
+      </div>
+      <!--menu starts  -->
+      <div class="col-md-7">
+        <div id="smoothmenu" class="ddsmoothmenu lang-en">
+          <ul>
+            <li><a href="../#"  id="menu-2011">2011 Elections</a></li>
+            <li><a href="../#"  id="menu-2013">Upcoming elections</a></li>
+            <li><a href="index.html"  id="menu-play">Charts</a> </li>
+            <li><a href="../#"  id="menu-play">About</a> </li>
+          </ul>
+         
+        </div>
+      </div>
+      <!--menu ends  -->   
+     <div class="col-md-2">
+      <ul class="language-switcher">
+          <li><a id="en-menu">EN</a></li>
+          <li><a id="fr-menu">FR</a></li>
+          <li><a id="ar-menu">AR</a></li>
+       </ul>
+    </div>
+ </div>
+</div>  <!--header inner  ends  --> 
+
+<div style="height:'100%' ; background-color:#FFF ; padding:20px">
+	<select id="first_select"></select>
+   	<select  multiple="multiple"  id="second_select"></select>
+   	<select id="chart_type">
+   	<optgroup label="Chart Type">
+   		<option value=1>Line Chart</option>
+   		<option value=2>Bar Chart</option>
+   	</optgroup>
+   	</select> 
+      <select id="sort">
+      <optgroup label="Sorting order">
+         <option value=1>By Regions</option>
+         <option value=2>Ascending</option>
+         <option value=3>Descending</option>
+      </optgroup>
+      </select>
+      <select id="level">
+      <optgroup label="show level">
+         <option value=1>Governorate Level</option>
+         <option value=2>Circonscription Level</option>
+      </optgroup>
+      </select> 
+
+    <a href="notes.html" id="notes" >Notes</a>   
+   	<div id="chart"></div>
+
+   	<select id="simple2"></select>
+   	<select  multiple="multiple"  id="jeux2"></select>
+   	<select id="switch2">
+   	<optgroup label="Chart Type">
+   		<option value=1>Line Chart</option>
+   		<option value=2>Bar Chart</option>
+   	</optgroup>
+   	</select> 
+      <select id="sort2">
+      <optgroup label="Sorting order">
+         <option value=1>By Regions</option>
+         <option value=2>Ascending</option>
+         <option value=3>Descending</option>
+      </optgroup>
+      </select>
+      <select id="level2">
+      <optgroup label="show level">
+         <option value=1>Governorate Level</option>
+         <option value=2>Circonscription Level</option>
+      </optgroup>
+      </select>    
+     	<div id="chart2"></div>
+</div> 
+
+
+
+   
+</body>
+</html>

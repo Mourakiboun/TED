@@ -3,7 +3,7 @@
     {
         "_id": "1",
         "lang": "en", "learn":" Learn more",
-        "title": "Exploring Ennahdha support in the 2011 Elections",
+        "title": "Exploring Ennahdha Results in the 2011 Elections",
         "subtitle": "Political party and coalition support",
     	"excerpt":"This visualization highlights the density of electoral district-level support for Ennahdha in the 2011 National Constituent Assembly elections.  Ennahdha won 89 seats and received the highest percentage of votes in 26 of 27 electoral districts in Tunisia; in Sidi Bouzid, Ennahdha finished with the second highest percentage of votes behind Popular Petition (Aridha).  Ennahdha also received the highest percentage of votes in all six out-of-country (OCV) voting districts.",
         "description": "This visualization highlights the density of electoral district-level support for Ennahdha in the 2011 National Constituent Assembly elections.  Ennahdha won 89 seats and received the highest percentage of votes in 26 of 27 electoral districts in Tunisia; in Sidi Bouzid, Ennahdha finished with the second highest percentage of votes behind Popular Petition (Aridha).  Ennahdha also received the highest percentage of votes in all six out-of-country (OCV) voting districts.",
@@ -15,7 +15,7 @@
     {
         "_id": "2",
         "lang": "en", "learn":" Learn more",
-        "title": "Exploring Al Aridha Results",
+        "title": "Exploring Al Aridha Results in the 2011 Elections",
         "subtitle": "Political party and coalition support",
         "excerpt": "This visualization highlights the district-level results of Al Aridha (Popular Petition) during the 2011 NCA elections. The political movement ranked first in Sidi Bouzid, the only district where Ennahdha came in second. Initially, Al Aridha won 27 seats: 26 seats inside the country and one for Tunisians abroad. But prior to the announcement of the preliminary results, the ISIE nullified eight seats in six constituencies for breaching campaign finance regulations...",
         "description": "This visualization highlights the district-level results of Al Aridha (Popular Petition) during the 2011 NCA elections. The political movement ranked first in Sidi Bouzid, the only district where Ennahdha came in second. Initially, Al Aridha won 27 seats: 26 seats inside the country and one for Tunisians abroad. But prior to the announcement of the preliminary results, the ISIE nullified eight seats in six constituencies for breaching campaign finance regulations. The Administrative Court overruled the ISIE’s decision, granting Al Aridha seven of the nullified seats for a total of 26 seats - the third highest proportion of seats in the NCA.",
@@ -27,7 +27,7 @@
     {
         "_id": "3",
         "lang": "en", "learn":" Learn more",
-        "title": "Exploring Ettakatol Results",
+        "title": "Exploring Ettakatol Results in the 2011 Elections",
         "subtitle": "Political party and coalition support",
         "excerpt": "This visualization highlights the district-level results of Ettakatol, also known as the Democratic Forum for Labor and Liberties, in the 2011 NCA elections. Ettakatol received most of its votes in the greater Tunis districts (Tunis 1, Tunis 2, Ariana, Ben Arous); Ettakatol came in second after Ennahdha in these four constituencies. The votes Ettakatol received in these four constituencies represent almost half of Ettakatol’s total votes (128,099 out of 285,530). Overall, Ettakatol ranked fourth in the NCA with a total of 20 seats (9%)...",
         "description": "This visualization highlights the district-level results of Ettakatol, also known as the Democratic Forum for Labor and Liberties, in the 2011 NCA elections. Ettakatol received most of its votes in the greater Tunis districts (Tunis 1, Tunis 2, Ariana, Ben Arous); Ettakatol came in second after Ennahdha in these four constituencies. The votes Ettakatol received in these four constituencies represent almost half of Ettakatol’s total votes (128,099 out of 285,530). Overall, Ettakatol ranked fourth in the NCA with a total of 20 seats (9%). The founder and secretary-general of Ettakatol, Mustapha Ben Jaafar, was elected president of the Constituent Assembly in November 22, 2011 with 145 out of 213 votes in the Assembly.",
@@ -39,7 +39,7 @@
     {
         "_id": "4",
         "lang": "en", "learn":" Learn more",
-        "title": "Exploring CPR Results",
+        "title": "Exploring CPR Results in the 2011 Elections",
         "subtitle": "Political party and coalition support",
         "excerpt": "This map highlights the degree of support for CPR (Congress for the Republic) at different constituencies during the NCA 2011 elections. Beating the Popular Petition (Aridha) with 3 seats, CPR ranked second in number of seats at the NCA with 29 seats after Ennahdha. CPR got the highest percentage of votes in Kébili with 26.71 % followed by Nabeul and Sfax with 14.19% and 13.02 %. The lowest percentage was recorded in Sidi Bouzid. The results seem to be in favor of CPR in regions dominated by Ennahdha rather than those dominated by El Aridha....",
         "description": "This map highlights the degree of support for CPR (Congress for the Republic) at different constituencies during the NCA 2011 elections. Beating the Popular Petition (Aridha) with 3 seats, CPR ranked second in number of seats at the NCA with 29 seats after Ennahdha. CPR got the highest percentage of votes in Kébili with 26.71 % followed by Nabeul and Sfax with 14.19% and 13.02 %. The lowest percentage was recorded in Sidi Bouzid. The results seem to be in favor of CPR in regions dominated by Ennahdha rather than those dominated by El Aridha.",
@@ -51,7 +51,7 @@
     {
         "_id": "5",
         "lang": "en", "learn":" Learn more",
-        "title": "Exploring PDP Results",
+        "title": "Exploring PDP Results in the 2011 Elections",
         "subtitle": "Political party and coalition support",
         "excerpt": "This map highlights the degree of support for PDP (Progressive Democratic Party) at different constituencies during the NCA 2011 elections. The PDP managed to get 16 seats in the National Constituent Assembly and ranked the fifth largest winning party during the election. This party got its highest score in Beja with 7.58 % of the vote without exceeding the threshold a seat in this constituency as well as in all other constituencies where this party gained representation , its lowest score was recorded in Sidi Bouzid with 1.18 % of the vote without representation for this constituency...",
         "description": "This map highlights the degree of support for PDP (Progressive Democratic Party) at different constituencies during the NCA 2011 elections. The PDP managed to get 16 seats in the National Constituent Assembly and ranked the fifth largest winning party during the election. This party got its highest score in Beja with 7.58 % of the vote without exceeding the threshold a seat in this constituency as well as in all other constituencies where this party gained representation , its lowest score was recorded in Sidi Bouzid with 1.18 % of the vote without representation for this constituency .",
@@ -63,7 +63,7 @@
     {
         "_id": "51",
         "lang": "en", "learn":" Learn more",
-        "title": "Exploring Afek Tounes Results",
+        "title": "Exploring Afek Tounes Results in the 2011 Elections",
         "subtitle": "Political party and coalition support",
         "excerpt": "This visualization highlights the density of electoral district-level support for Afek Tounes in the 2011 National Constituent Assembly elections. Afek Tounes won 4 seats and received its highest percentage of votes in Mahdia (6,18% of the total votes) where it was represented by RIM MASMOUDI. Afek Tounes was not present in all the electoral districts in the 2011 Tunisian elections....",
         "description": "This visualization highlights the density of electoral district-level support for Afek Tounes in the 2011 National Constituent Assembly elections. Afek Tounes won 4 seats and received its highest percentage of votes in Mahdia (6,18% of the total votes) where it was represented by RIM MASMOUDI. Afek Tounes was not present in all the electoral districts in the 2011 Tunisian elections, however it was represented in 4 of the six out-of- country voting districts.",

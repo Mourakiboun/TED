@@ -84,6 +84,7 @@ function formatData()
 	formatter.format(data, 20);
 	formatter.format(data, 21);
 	formatter.format(data, 22);
+	formatter.format(data, 25);
 }
 
 
@@ -93,6 +94,7 @@ function defaultAppendOptions(arrayData)
    $('<optGroup/>').attr('label',"Parties Results").appendTo($("#first_select"));
    for (var i = cste.NAHDHA; i <= cste.PDP; i++) {
       $("#first_select").append("<option value='" + i + "'>" + arrayData[0][i] + "</option");}
+      $("#first_select").append("<option value='" + 25 + "'>" + arrayData[0][25] + "</option>");
 
    $('<optGroup/>').attr('label',"Election Data").appendTo($("#first_select"));
    for (var i = cste.Eligible; i <= cste.Passively_Turnout; i++) {
@@ -107,7 +109,11 @@ function defaultAppendOptions(arrayData)
    for (var i = cste.NAHDHA; i <= cste.PDP; i++) {
       if (i == selected) continue;
       $("#second_select").append("<option value='" + i + "'>" + arrayData[0][i] + "</option");
-      } 
+      }
+      $("#second_select").append("<option value='" + 25 + "'>" + arrayData[0][25] + "</option");
+
+     
+
 
       $("#second_select").attr("size",$("#second_select option").length);
 
@@ -122,9 +128,17 @@ function appendOptions(arrayData)
 			if (i == selected) continue;
 			$("#second_select").append("<option value='" + i + "'>" + arrayData[0][i] + "</option");
 		}
-
+		 $("#second_select").append("<option value='" + 25 + "'>" + arrayData[0][25] + "</option>");
 		$("#second_select").attr("size",$("#second_select option").length);
 	}
+
+	 else if (selected == 25) 
+	 {
+      	for (var i = cste.NAHDHA; i <= cste.PDP; i++) 
+      		{$("#second_select").append("<option value='" + i + "'>" + arrayData[0][i] + "</option");}
+      	$("#second_select").attr("size",$("#second_select option").length);
+     }
+
 
 	else if ( selected == cste.Blank || selected == cste.Cancelled || selected ==cste.Wasted) 
 	{
@@ -284,7 +298,7 @@ function drawChart() {
       // determine selected item and show an empty multiple select 
       selected = +$("#first_select option:selected").val();
       document.getElementById('level').style.display = 'inline';
-      if (selected == cste.Eligible || selected >= cste.Youth)
+      if (selected == cste.Eligible || selected >= cste.Youth && selected != 25)
       {
       	if (lvl == cste.lvl_circ)
       		alert("You cannot display these data on a circonscription level, you will be redirected to the governorate level");

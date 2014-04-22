@@ -43,6 +43,7 @@ function drawChart() {
    formatter.format(data, 20);
    formatter.format(data, 21);
    formatter.format(data, 22);
+   formatter.format(data, 25);
 
    // set the default view
    var view = new google.visualization.DataView(data);
@@ -63,6 +64,7 @@ function drawChart() {
    $('<optGroup/>').attr('label',"Parties Results").appendTo($("#simple2"));
    for (var i = 1; i < 6; i++) {
       $("#simple2").append("<option value='" + i + "'>" + arrayData[0][i] + "</option");}
+      $("#simple2").append("<option value='" + 25 + "'>" + arrayData[0][25] + "</option");
 
    $('<optGroup/>').attr('label',"Election Data").appendTo($("#simple2"));
    for (var i = 6; i < 14; i++) {
@@ -79,6 +81,7 @@ function drawChart() {
       if (i == selectt) continue;
       $("#jeux2").append("<option value='" + i + "'>" + arrayData[0][i] + "</option");
       } 
+      $("#jeux2").append("<option value='" + 25 + "'>" + arrayData[0][25] + "</option>");
 
       $("#jeux2").attr("size",$("#jeux2 option").length);
 
@@ -116,7 +119,7 @@ function drawChart() {
       selectt = +$("#simple2 option:selected").val();
 
       document.getElementById('level2').style.display = 'inline';
-      if (selectt == cste.Eligible || selectt >= cste.Youth)
+      if (selectt == cste.Eligible || selectt >= cste.Youth && selectt != 25)
       {
          if (lvl == cste.lvl_circ)
             alert("You cannot display these data on a circonscription level, you will be redirected to the governorate level");
@@ -140,9 +143,20 @@ function drawChart() {
             if (i == selectt) continue;
             $("#jeux2").append("<option value='" + i + "'>" + arrayData[0][i] + "</option");
             } 
-
+            $("#jeux2").append("<option value='" + 25 + "'>" + arrayData[0][25] + "</option");
             $("#jeux2").attr("size",$("#jeux2 option").length);
       }
+
+      else if (selectt == 25)
+         {
+         for (var i = 1; i < 6; i++) {
+            
+            $("#jeux2").append("<option value='" + i + "'>" + arrayData[0][i] + "</option");
+            } 
+            
+            $("#jeux2").attr("size",$("#jeux2 option").length);
+      }
+
       else if (selectt < 10 && selectt > 6) 
       {
          for (var i = 7; i < 10; i++) {

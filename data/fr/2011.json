@@ -10,7 +10,7 @@
         "about_data": "",
         "methodology": "",
         "picture": "img/projects/nahdha.png", 
-        "map": "tunisia.map-u3z7fdnm,mehdi118218.hif2hb1j"
+        "map": "tunisia.map-u3z7fdnm,mehdi118218.i28dggil"
     },
     {   "_id": "2",
         "lang": "fr", "learn":" Lire la suite",
@@ -21,7 +21,7 @@
         "about_data": "",
         "methodology": "",
         "picture": "img/projects/aridaa.png", 
-        "map": "tunisia.map-u3z7fdnm,mehdi118218.hg8ja8pm"
+        "map": "tunisia.map-u3z7fdnm,mehdi118218.i28bgdip"
     },
     {   "_id": "3",
         "lang": "fr", "learn":" Lire la suite",
@@ -32,7 +32,7 @@
         "about_data": "",
         "methodology": "",
         "picture": "img/projects/ETTAKATOL.png", 
-        "map": "tunisia.map-u3z7fdnm,mehdi118218.hg8n0gmb"
+        "map": "tunisia.map-u3z7fdnm,mehdi118218.i28cp8i3"
     },
     {   "_id": "4",
         "lang": "fr", "learn":" Lire la suite",
@@ -43,7 +43,7 @@
         "about_data": "",
         "methodology": "",
         "picture": "img/projects/cpr.png", 
-        "map": "tunisia.map-u3z7fdnm,mehdi118218.hg8lnpgk"
+        "map": "tunisia.map-u3z7fdnm,mehdi118218.i28cl4na"
     },
     {   "_id": "5",
         "lang": "fr", "learn":" Lire la suite",
@@ -54,7 +54,7 @@
         "about_data": "",
         "methodology": "",
         "picture": "img/projects/PDP.png", 
-        "map": "tunisia.map-u3z7fdnm,mehdi118218.hif3mfjj"
+        "map": "tunisia.map-u3z7fdnm,mehdi118218.i28eae1k"
     },
     {   "_id": "51",
         "lang": "fr", "learn":" Lire la suite",
@@ -69,7 +69,7 @@
     },
     {  "_id": "6",
         "lang": "fr", "learn":" Lire la suite",
-        "title": "Visualisation du niveau de la participation des électeurs potentiels ",
+        "title": "Visualisation du taux de participation des électeurs",
         "subtitle": "L’admissibilité et la participation électorale",
         "excerpt":"Conformément aux “statistiques complètes et approfondies de dépouillement des votes” publiées par l’ISIE le 12 Novembre 2011, la totalité des électeurs éligibles représente 7.993.924 personnes, soit le total des électeurs automatiquement inscrits sur la base des registres des cartes d’identité nationales..",
         "description": "Conformément aux “statistiques complètes et approfondies de dépouillement des votes” publiées par l’ISIE le 12 Novembre 2011, la totalité des électeurs éligibles représente 7.993.924 personnes, soit le total des électeurs automatiquement inscrits sur la base des registres des cartes d’identité nationales; le taux général de participation a atteint 51% au niveau du territoire Tunisien. Cette visualisation indique le taux général de participation par circonscription de la totalité  des électeurs enregistrés en Tunisie pendant les élections de l'Assemblé Nationale Constituante de 2011.",
@@ -87,53 +87,53 @@
         "about_data": "",
         "methodology":"",
         "picture": "img/projects/eligible.png", 
-        "map": "tunisia.map-u3z7fdnm,mehdi118218.hjop7c1p"
+        "map": "tunisia.map-u3z7fdnm,mehdi118218.i28efbl0"
     }, 
     {   "_id": "8",
         "lang": "fr", "learn":" Lire la suite",
-        "title": "Témoignant du niveau de participation des électeurs activement inscrits",
+        "title": "Visualisation du taux de participation des électeurs activement inscrits",
         "subtitle": "L'inscription des électeurs et la participation électorale",
         "excerpt":"Un électeur activement enregistré représente un électeur potentiel selon la liste électorale de référence, qui a choisi de se déplacer au centre d'inscription électorale pour enregistrer ses données avant la tenue des élections.<br/>Pendant les élections de l'Assemblé  Nationale Constituante de 2011, l'ISIE.",
         "description": "Un électeur activement enregistré représente un électeur potentiel selon la liste électorale de référence, qui a choisi de se déplacer au centre d'inscription électorale pour enregistrer ses données avant la tenue des élections.<br/>Pendant les élections de l'Assemblé  Nationale Constituante de 2011, l'ISIE. a fortement encouragé les électeurs potentiels à accomplir cette action et ce par le déploiement  de divers efforts tels que le prolongement de la date limite prévue pour cette opération, l'augmentation des centres d'inscription, le déploiement de centres d'inscription mobiles et des campagnes publicitaires de proximité et ce suite au faible taux de participation initialement enregistré lors de la première date limite qui a été prévue pour début Août 2011.<br/>  Selon “les statistiques complètes et approfondies de dépouillement des votes” publiées par l’ISIE le 12 Novembre 2011, 4.123.602 électeurs parmi 7.993.924 votants potentiels suivant la base du registre des données des cartes d’identité nationales, se sont enregistrés volontairement pendant la période allant de début Juillet jusqu’à fin Août 2011, soit 51% des électeurs potentiels.  86,4% de ces électeurs ont accomplis leur devoir de vote lors des élections du 23 Octobre 2011.",
         "about_data": "",
         "methodology": "", 
         "picture": "img/projects/active.png", 
-        "map": "tunisia.map-u3z7fdnm,mehdi118218.hjp13hfg"
+        "map": "tunisia.map-u3z7fdnm,mehdi118218.i28b3cf8"
     },
     {   "_id": "9",
         "lang": "fr", "learn":" Lire la suite",
-        "title": "Témoignant du niveau de participation des électeurs passivement inscrits",
+        "title": "Visualisation du taux de participation des électeurs passivement inscrits",
         "subtitle": "L'admissibilité des électeurs et la participation électorale",
         "excerpt":"un électeur passivement enregistré est un citoyen jouissant de son droit de vote  conformément aux stipulations de la loi électorale du pays et qui est automatiquement enregistré au niveau de la liste des électeurs, généralement selon la base de données la plus fiable dont dispose les autorités locales. Lors des ..",
         "description": "",
         "about_data": "",
         "methodology": "un électeur passivement enregistré est un citoyen jouissant de son droit de vote  conformément aux stipulations de la loi électorale du pays et qui est automatiquement enregistré au niveau de la liste des électeurs, généralement selon la base de données la plus fiable dont dispose les autorités locales. Lors des élections de l'Assemblée Nationale Constituante de 2011, on a adopté la base de données des cartes d’identité nationales comme base électorale. Cependant on a  parallèlement encouragé les électeurs potentiels à s'enregistrer activement en vérifiant leurs données au niveau des centres d'inscription électorale.<br/>Selon “les statistiques complètes et approfondies de dépouillement des votes” publié par l’ISIE le 12 Novembre 2011, 3.870.322 électeurs parmi 7.993.924 votants potentiels suivant la base du registre des données des cartes d’identité nationales n'ont pas fait la vérification et par conséquent ont été considérés comme électeurs passivement enregistrés, soit 49% des électeurs potentiels.  Seul 14% de ces électeurs ont répondu présents lors des élections du 23 Octobre 2011. Cette visualisation affiche le taux de participation par circonscription des électeurs inscrits automatiquement aux élections de l’A.N.C. de 2011.",
         "picture": "img/projects/passive.png", 
-        "map": "tunisia.map-u3z7fdnm,mehdi118218.hjp1elka"
+        "map": "tunisia.map-u3z7fdnm,mehdi118218.i28do8p9"
     },
     {   
         "_id": "10",
         "lang": "fr", "learn":" Lire la suite",
-        "title": "Les votes gaspillés par rapport à la représentation dans l’Assemblée Nationale Constituante ",
+        "title": "Les votes gaspillés par rapport à la représentation dans l’ANC ",
         "subtitle": "Le scrutin et la représentation politique",
         "excerpt":"Les votes gaspillés sont les votes obtenus qui ne correspondent pas à une représentation au parlement. En Tunisie, les votes gaspillés sont considérés comme bulletins de vote exprimés en faveur ....",
         "description": "Les votes gaspillés sont les votes obtenus qui ne correspondent pas à une représentation au parlement. En Tunisie, les votes gaspillés sont considérés comme bulletins de vote exprimés en faveur des partis politiques et des listes de coalitions qui n'ont pas gagné des sièges au niveau de la circonscription électorale à l'Assemblée Nationale Constituante. Cette visualisation révèle la part des votes gaspillés par circonscription électorale des élections de l'Assemblée Nationale Constituante de 2011. Généralement, plus le vote est fragmenté entre les partis ou coalitions, plus il demeure gaspillé.",
         "about_data": "",
         "methodology": "",
         "picture": "img/projects/wasted.png", 
-        "map": "tunisia.map-u3z7fdnm,mehdi118218.hjp3c1gc"
+        "map": "tunisia.map-u3z7fdnm,mehdi118218.i28emjh2"
     },
     {  
         "_id": "11",
         "lang": "fr", "learn":"Lire la suite",
-        "title": "Visualisation de la proportion des bulletins blancs dans les suffrages",
+        "title": "Visualisation de la proportion des bulletins blancs",
         "excerpt":"«les bulletins blancs» sont les suffrages exprimés par les électeurs sans cocher un candidat, un parti politique ou une liste de coalition. Dans l’ensemble, un bulletin blanc est exprimé par un électeur qui souhaite ...",
         "subtitle": "Le scrutin et la représentation politique",
         "description": "«les bulletins blancs» sont les suffrages exprimés par les électeurs sans cocher un candidat, un parti politique ou une liste de coalition. Dans l’ensemble, un bulletin blanc est exprimé par un électeur qui souhaite exercer son droit de vote, mais n'est pas satisfait de ses options de candidats ou le processus électoral. Lors des élections de l'Assemblée Nationale Constituante de 2011, près de 100.000 électeurs ont voté blanc. Cette visualisation montre le nombre de bulletins blancs exprimés par circonscription électorale de l'ANC aux élections de 2011",
         "about_data": "",
         "methodology": " ",
         "picture": "img/projects/blanc.png", 
-        "map": "tunisia.map-u3z7fdnm,mehdi118218.hifi40b0"
+        "map": "tunisia.map-u3z7fdnm,mehdi118218.i28c4bm7"
     }
     
    

@@ -1,4 +1,4 @@
-// load the visualization library from Google and set a listener
+﻿// load the visualization library from Google and set a listener
 google.load("visualization", "1", {packages:["corechart"]});
 google.setOnLoadCallback(drawChart);      
 
@@ -57,6 +57,12 @@ var viewCirc;
 var dataGov;
 var dataCirc;
 
+var file = "final.csv";
+var notice = "You cannot display these data on the electoral level, you will be redirected to the administrative level";
+var append_results = "Parties Results";
+var append_electoral = "Electoral Data";
+var append_socio = "Socio-Economic Data";
+
 
 function formatData()
 {
@@ -91,16 +97,16 @@ function formatData()
 function defaultAppendOptions(arrayData)
 {
 	// use arrayData to load the select elements with the appropriate options
-   $('<optGroup/>').attr('label',"Parties Results").appendTo($("#first_select"));
+   $('<optGroup/>').attr('label',append_results).appendTo($("#first_select"));
    for (var i = cste.NAHDHA; i <= cste.PDP; i++) {
       $("#first_select").append("<option value='" + i + "'>" + arrayData[0][i] + "</option");}
       $("#first_select").append("<option value='" + 25 + "'>" + arrayData[0][25] + "</option>");
 
-   $('<optGroup/>').attr('label',"Election Data").appendTo($("#first_select"));
+   $('<optGroup/>').attr('label',append_electoral).appendTo($("#first_select"));
    for (var i = cste.Eligible; i <= cste.Passively_Turnout; i++) {
       $("#first_select").append("<option value='" + i + "'>" + arrayData[0][i] + "</option");}
 
-   $('<optGroup/>').attr('label',"Socio-Economic Data").appendTo($("#first_select"));
+   $('<optGroup/>').attr('label',append_socio).appendTo($("#first_select"));
    for (var i = cste.Youth; i <= cste.Unemployment_Education; i++) {
       $("#first_select").append("<option value='" + i + "'>" + arrayData[0][i] + "</option");}
    
@@ -241,9 +247,25 @@ function updateChart(NewColumns)
 
 function drawChart() {
    
+  
+
+   if(document.URL.indexOf("charts_fr") > -1) {
+      file ="final_fr.csv";
+      notice = "Ces donnees ne peuvent pas etre affichees au niveau electoral, vous allez etre rediriges vers le niveau administratif";
+      append_results = "Resultats des partis";
+      append_electoral = "Donnees Electorales";
+      append_socio = "Donnees Socio-economiques";
+   }
+   else if(document.URL.indexOf("charts_ar") > -1) {
+      file ="final_ar.csv";
+      notice = "Ces donnees ne peuvent pas etre affichees au niveau electoral, vous allez etre rediriges vers le niveau administratif";
+      append_results = "نتائج الأحزاب";
+      append_electoral = "معطيات إنتخابية";
+      append_socio = "معطيات إجتماعية و إقتصادية";
+   }
 
    // grab the CSV
-   $.get("final.csv", function(csvString) {
+   $.get(file, function(csvString) {
    
    // transform the CSV string into a 2-dimensional array
    var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
@@ -301,7 +323,7 @@ function drawChart() {
       if (selected == cste.Eligible || selected >= cste.Youth && selected != 25)
       {
       	if (lvl == cste.lvl_circ)
-      		alert("You cannot display these data on a circonscription level, you will be redirected to the governorate level");
+      		alert(notice);
       	lvl = cste.lvl_gov;
       	//document.getElementById('level').selectedIndex = lvl;
       	document.getElementById('level').selectedIndex = 1;

@@ -2,12 +2,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Tunisia Charts Draft</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <title>Tunisia Election Charts</title>
    <script src="https://www.google.com/jsapi"></script>
    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
    <script src="jquery.csv-0.71.min.js"></script>
    <script src="mehdi_charts.js"></script>
    <script src="mehdi_charts_2.js"></script>
+
+
+   <!--social-->
+   <script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "b44119a1-eb33-492e-8b7d-d18b72fa34ac", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
       
 <!--google web font-->
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' type='text/css'>
@@ -26,7 +33,18 @@
   <script type="text/javascript" src="../js/lib/scrollTo.min.js"></script>
    <script type="text/javascript" src="../js/lib/classie.js"></script>
 
-  
+   <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+
+  <script>
+  $( document ).tooltip({
+          content: function () {
+              return $(this).prop('title');
+          }
+      });
+</script>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 
 
 </head>
@@ -42,10 +60,10 @@
       <div class="col-md-7">
         <div id="smoothmenu" class="ddsmoothmenu lang-en">
           <ul>
-            <li><a href="../#"  id="menu-2011">2011 Elections</a></li>
-            <li><a href="../#"  id="menu-2013">Upcoming elections</a></li>
-            <li><a href="index.html"  id="menu-play">Charts</a> </li>
-            <li><a href="../#"  id="menu-play">About</a> </li>
+            <li><a href="../#"  id="menu-2011">2011 انتخابات</a></li>
+            <li><a href="../#"  id="menu-2013">الإنتخابات القادمة</a></li>
+            <li><a  id="menu-play">الرسوم البيانية</a> </li>
+            <li><a href="../#"  id="menu-play">حول</a> </li>
           </ul>
          
         </div>
@@ -53,9 +71,9 @@
       <!--menu ends  -->   
      <div class="col-md-2">
       <ul class="language-switcher">
-          <li><a id="en-menu">EN</a></li>
-          <li><a id="fr-menu">FR</a></li>
-          <li><a id="ar-menu">AR</a></li>
+          <li><a id="en-menu" href="charts_en.html">EN</a></li>
+          <li><a id="fr-menu" href="charts_fr.html">FR</a></li>
+          <li><a id="ar-menu" >AR</a></li>
        </ul>
     </div>
  </div>
@@ -65,9 +83,9 @@
 	<select id="first_select"></select>
    	<select  multiple="multiple"  id="second_select"></select>
    	<select id="chart_type">
-   	<optgroup label="Chart Type">
-   		<option value=1>Line Chart</option>
-   		<option value=2>Bar Chart</option>
+   	<optgroup label="نوع الرسم البياني">
+   		<option value=1>خطوط</option>
+   		<option value=2>أعمدة</option>
    	</optgroup>
    	</select> 
       <select id="sort">
@@ -84,7 +102,7 @@
       </optgroup>
       </select> 
 
-    <!--<a href="notes.html" id="notes" >Notes</a>   -->
+    <a href="notes.html" id="notes" >Notes</a>   
    	<div id="chart"></div>
 
    	<select id="simple2"></select>
@@ -108,6 +126,26 @@
          <option value=2>Circonscription Level</option>
       </optgroup>
       </select>    
+
+<div id="share">
+      <!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+<a class="addthis_button_facebook" ></a>
+<a class="addthis_button_twitter" ></a>
+<a class="addthis_button_linkedin" ></a>
+<a class="addthis_button_tumblr" ></a>
+<a class="addthis_button_google_plusone_share" ></a>
+<a class="addthis_button_pinterest_share" ></a>
+
+
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53611498665ace06"></script>
+<!-- AddThis Button END -->
+      </div>
+
+
+
      	<div id="chart2"></div>
 </div> 
 

@@ -1,6 +1,13 @@
-// load the visualization library from Google and set a listener
+﻿// load the visualization library from Google and set a listener
 google.load("visualization", "1", {packages:["corechart"]});
 google.setOnLoadCallback(drawChart);      
+
+var file = "final.csv";
+var notice = "You cannot display these data on the electoral level, you will be redirected to the administrative level";
+var append_results = "Parties Results";
+var append_electoral = "Electoral Data";
+var append_socio = "Socio-Economic Data";
+
 
 
 function drawChart() {
@@ -9,8 +16,25 @@ function drawChart() {
    var order = 1;
    var selectt = 1;
 
+   
+
+   if(document.URL.indexOf("charts_fr") > -1) {
+      file ="final_fr.csv";
+      notice = "Ces donnees ne peuvent pas etre affichees au niveau electoral, vous allez etre rediriges vers le niveau administratif";
+      append_results = "Resultats des partis";
+      append_electoral = "Donnees Electorales";
+      append_socio = "Donnees Socio-economiques";
+   }
+   else if(document.URL.indexOf("charts_ar") > -1) {
+      file ="final_ar.csv";
+      notice = "Ces donnees ne peuvent pas etre affichees au niveau electoral, vous allez etre rediriges vers le niveau administratif";
+      append_results = "نتائج الأحزاب";
+      append_electoral = "معطيات إنتخابية";
+      append_socio = "معطيات إجتماعية و إقتصادية";
+   }
+
    // grab the CSV
-   $.get("final.csv", function(csvString) {
+   $.get(file, function(csvString) {
    
    // transform the CSV string into a 2-dimensional array
    var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
@@ -61,16 +85,16 @@ function drawChart() {
 
  
    // use arrayData to load the select elements with the appropriate options
-   $('<optGroup/>').attr('label',"Parties Results").appendTo($("#simple2"));
+   $('<optGroup/>').attr('label',append_results).appendTo($("#simple2"));
    for (var i = 1; i < 6; i++) {
       $("#simple2").append("<option value='" + i + "'>" + arrayData[0][i] + "</option");}
       $("#simple2").append("<option value='" + 25 + "'>" + arrayData[0][25] + "</option");
 
-   $('<optGroup/>').attr('label',"Election Data").appendTo($("#simple2"));
+   $('<optGroup/>').attr('label',append_electoral).appendTo($("#simple2"));
    for (var i = 6; i < 14; i++) {
       $("#simple2").append("<option value='" + i + "'>" + arrayData[0][i] + "</option");}
 
-   $('<optGroup/>').attr('label',"Socio-Economic Data").appendTo($("#simple2"));
+   $('<optGroup/>').attr('label',append_socio).appendTo($("#simple2"));
    for (var i = 14; i < 23; i++) {
       $("#simple2").append("<option value='" + i + "'>" + arrayData[0][i] + "</option");}
    
@@ -122,7 +146,7 @@ function drawChart() {
       if (selectt == cste.Eligible || selectt >= cste.Youth && selectt != 25)
       {
          if (lvl == cste.lvl_circ)
-            alert("You cannot display these data on a circonscription level, you will be redirected to the governorate level");
+            alert(notice);
          lvl = cste.lvl_gov;
          document.getElementById('level2').selectedIndex = 1;
          document.getElementById('level2').value = 1;

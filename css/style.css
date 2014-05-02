@@ -638,18 +638,43 @@ transition: all .3s;
         text-align: center;
 }
 
+
+
+.ui-tooltip
+
+{
+    font-size:10pt;
+    font-family:Calibri;
+}
+
+
+
+
 #notes {
 	color: white;
 	font-size: 15px;
 	font-weight: bolder;
 	margin-right: 100px;
-	position: fixed;
+	position: absolute;
 	top: 100px;
 	z-index: 99999999999999;
 	right: 30px;
 	background-color:#CD2122;
 	padding: 10px 5px 10px 5px;
     width: 70px;
+    text-align: center;
+}
+
+#share {
+	
+	margin-right: 100px;
+	position: absolute;
+	top: 480px;
+	z-index: 99999999999999;
+	right: 30px;
+	
+	padding: 10px 5px 10px 5px;
+    
     text-align: center;
 }
 

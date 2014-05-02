@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+   <title>Tunisia Election Charts</title>
+   <script src="https://www.google.com/jsapi"></script>
+   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+   <script src="jquery.csv-0.71.min.js"></script>
+   <script src="mehdi_charts.js"></script>
+   <script src="mehdi_charts_2.js"></script>
+
+
+<!--social-->
+   <script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "b44119a1-eb33-492e-8b7d-d18b72fa34ac", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+      
+<!--google web font-->
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' type='text/css'>
+
+  <!--basic style sheets and scripts -->
+  
+  <link rel="stylesheet" media="screen" href="../css/bootstrap.min.css"/>
+  <!--link rel="stylesheet" media="screen" href="css/bootstrap-responsive.css"/-->
+  
+  <link href='//api.tiles.mapbox.com/mapbox.js/v1.4.2/mapbox.css' rel='stylesheet' />
+
+  <link rel="stylesheet" media="screen" href="../css/style.css"/>
+  <link rel="stylesheet" media="screen" href="../css/maps.css"/>
+
+   <script type="text/javascript" src="../js/lib/jquery.inview.min.js"></script>
+  <script type="text/javascript" src="../js/lib/scrollTo.min.js"></script>
+   <script type="text/javascript" src="../js/lib/classie.js"></script>
+
+
+  
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+
+  <script>
+  $( document ).tooltip({
+          content: function () {
+              return $(this).prop('title');
+          }
+      });
+</script>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
+
+</head>
+<body style="background-color:#304458">
+
+<div id="header-inner" class="container" style="background-color:#304458" margin="0px !important">
+ 
+    <div class="row"> 
+      <div class="col-md-3"><a class="title" href="../#"><span class="logo">Tunisia Election Data</span></a>
+      
+      </div>
+      <!--menu starts  -->
+      <div class="col-md-7">
+        <div id="smoothmenu" class="ddsmoothmenu lang-en">
+          <ul>
+            <li><a href="../#"  id="menu-2011">2011 Elections</a></li>
+            <li><a href="../#"  id="menu-2013">Upcoming elections</a></li>
+            <li><a id="menu-play">Charts</a> </li>
+            <li><a href="../#"  id="menu-play">About</a> </li>
+          </ul>
+         
+        </div>
+      </div>
+      <!--menu ends  -->   
+     <div class="col-md-2">
+      <ul class="language-switcher">
+          <li><a id="en-menu">EN</a></li>
+          <li><a id="fr-menu" href="charts_fr.html">FR</a></li>
+          <li><a id="ar-menu" href="charts_ar.html">AR</a></li>
+       </ul>
+    </div>
+ </div>
+</div>  <!--header inner  ends  --> 
+
+<div style="height:'100%' ; background-color:#FFF ; padding:20px">
+	<select id="first_select" title="<b>Dataset options:</b></br>For each chart, one may choose from three dataset options: political party results, other election results, and socio-economic data. "></select>
+   	<select  multiple="multiple"  id="second_select" title='<b>Dataset combinations:</b></br>This menu displays data from the same source as the first dataset. For example, if you select "blank ballots" in the first menu, related datasets that share the same source will appear in the second menu: cancelled ballots and wasted ballots. It is possible to view one or all of the data options in the second menu.'></select>
+   	<select id="chart_type" title='<b>Line vs. bar chart:</b></br>  This menu allows the viewer to select either a line or bar chart to display the data. Note: a line graph here does not represent a series of related values, it is simply another option for visualizing data at a specific administrative level.'>
+   	<optgroup label="Chart Type">
+   		<option value=1>Line Chart</option>
+   		<option value=2>Bar Chart</option>
+   	</optgroup>
+   	</select> 
+      <select id="sort" title='<b>Sorting order:</b></br> This menu has three options for the data order: by geographical region, ascending order or descending order. Note: the “region” option is how Tunisia’s electoral management body, the ISIE, organizes its results - according to geographical region and in this order: greater Tunis, north east, north west, center west, center east, south east, south west.'>
+      <optgroup label="Sorting order">
+         <option value=1>By Regions</option>
+         <option value=2>Ascending</option>
+         <option value=3>Descending</option>
+      </optgroup>
+      </select>
+      <select id="level" title='<b>Administrative or electoral level:</b></br> the fifth menu has different options for different datasets. For all election results, one can view data at the administrative district level (governorates) or the electoral district level (circonscriptions). There are 24 governorates in Tunisia and 27 circonscriptions (three governorates are divided into two as circonscriptions)'>
+      <optgroup label="show level">
+         <option value=1>Administrative Level</option>
+         <option value=2>Electoral Level</option>
+      </optgroup>
+      </select> 
+
+    <a href="notes.html" id="notes" >Notes</a>   
+   	<div id="chart"></div>
+
+   	<select id="simple2"></select>
+   	<select  multiple="multiple"  id="jeux2"></select>
+   	<select id="switch2">
+   	<optgroup label="Chart Type">
+   		<option value=1>Line Chart</option>
+   		<option value=2>Bar Chart</option>
+   	</optgroup>
+   	</select> 
+      <select id="sort2">
+      <optgroup label="Sorting order">
+         <option value=1>By Regions</option>
+         <option value=2>Ascending</option>
+         <option value=3>Descending</option>
+      </optgroup>
+      </select>
+      <select id="level2">
+      <optgroup label="show level">
+         <option value=1>Governorate Level</option>
+         <option value=2>Circonscription Level</option>
+      </optgroup>
+      </select>   
+
+      <div id="share">
+      <!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+<a class="addthis_button_facebook" ></a>
+<a class="addthis_button_twitter" ></a>
+<a class="addthis_button_linkedin" ></a>
+<a class="addthis_button_tumblr" ></a>
+<a class="addthis_button_google_plusone_share" ></a>
+<a class="addthis_button_pinterest_share" ></a>
+
+
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53611498665ace06"></script>
+<!-- AddThis Button END -->
+      </div>
+
+     	<div id="chart2"></div>
+</div> 
+
+
+
+   
+</body>
+</html>

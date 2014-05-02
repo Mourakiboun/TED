@@ -50,6 +50,7 @@
 
 </head>
 <body style="background-color:#304458">
+<div  id="overlay" onclick="hiide()"></div>
 
 <div id="header-inner" class="container" style="background-color:#304458" margin="0px !important">
  
@@ -80,6 +81,9 @@
  </div>
 </div>  <!--header inner  ends  --> 
 
+
+
+
 <div style="height:'100%' ; background-color:#FFF ; padding:20px">
 	<select id="first_select" title="<b>Dataset options:</b></br>For each chart, one may choose from three dataset options: political party results, other election results, and socio-economic data. "></select>
    	<select  multiple="multiple"  id="second_select" title='<b>Dataset combinations:</b></br>This menu displays data from the same source as the first dataset. For example, if you select "blank ballots" in the first menu, related datasets that share the same source will appear in the second menu: cancelled ballots and wasted ballots. It is possible to view one or all of the data options in the second menu.'></select>
@@ -103,7 +107,7 @@
       </optgroup>
       </select> 
 
-    <a href="notes.html" id="notes" >Notes</a>   
+    <a onclick="shoow()" id="notes" >Notes</a>   
    	<div id="chart"></div>
 
    	<select id="simple2"></select>
@@ -147,6 +151,36 @@
 
      	<div id="chart2"></div>
 </div> 
+
+
+<div id="viz-detail" class="dash-right-push">
+<div id="description-dash" class="dash-right dash-right-vertical dash-right-right">
+<span id="notes_h1"><h3>Notes</h3></span></br>
+
+<span id="notes_text">Note the following details and exceptions when viewing data in the charts section.</span></br></br>
+
+<span id="notes_h2" onclick="$('#notes_text').toggle(); ">Overview</span></br>
+<span>The charts section allows the viewer to compare and contrast Tunisia’s latest election-related data as well as socio-economic data. Two charts have been provided in order for related data from different sources can be displayed simultaneously for the purpose of comparison and possible correlation.</span></br>
+
+</br>This charts section does not attempt to analyze these datasets or suggest correlations. It is a platform for the public to interact with various datasets and draw one’s own conclusion about the relationships that do or do not exist. </br></br>
+
+<span>Datasets with different boundaries:</span></br><span> Socio-economic data is gathered at the governorate level, unlike election results that are reported at the circonscription level. While election results can be displayed here at either level, socio-economic data and cannot be viewed at the circonscription level; please keep this in mind when comparing with election results at the circonscription level.</span></br>
+
+</br><span>Y-axis value:</span></br><span> when comparing data between charts, please keep in mind the percentage value on the Y-axis will depend on the dataset and therefore may vary from one chart to another; please be aware this can affect whether or not there is a perceived correlation.</span></br>
+
+</br><span>Timing of data collection:</span></br><span> The socio-economic data was collected in 2009, whereas the election results are from 2011. Please remember that socio-economic data changes from year to year and therefore does not reflect the exact population statistics of the 2011 elections. </span></br>
+
+</br><span>Population size: </span></br><span>Election results are drawn from a population of citizens 18 years and older (those who are eligible to vote). for the socio-economic data, the underlying population size varies according to the type of data. For example, the “youth ratio” dataset refers to the percentage per governorate of young people between 15-34 in 2009 (need to check).  The following age ranges apply for these datasets: unemployment, illiteracy. Then define how big a household is.</span></br>
+
+</br><span>Communications data:</span></br><span> The socio-economic data provided about mobile, internet and computer coverage is measured at the household – not individual – level. (more data and definitions here)</span></br>
+
+</br><sapn>Voters abroad:</span></br><span> There are 6 circonscriptions outside of Tunisia for Tunisians voting abroad; these results are not incorporated into the data presented in this section. </span></br>
+
+</br><span>Data sources:</span>
+
+</div>
+
+</div>
 
 
 

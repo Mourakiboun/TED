@@ -165,6 +165,7 @@ a:hover {
 #header-inner {
 	padding: 15px 0px 10px 0px;
 	border-top: 4px solid #CD2122;
+
 }
 /*----- header-btm -----*/
 #header-btm {
@@ -657,7 +658,7 @@ transition: all .3s;
 	margin-right: 100px;
 	position: absolute;
 	top: 100px;
-	z-index: 99999999999999;
+	z-index: 99;
 	right: 30px;
 	background-color:#CD2122;
 	padding: 10px 5px 10px 5px;
@@ -670,7 +671,7 @@ transition: all .3s;
 	margin-right: 100px;
 	position: absolute;
 	top: 480px;
-	z-index: 99999999999999;
+	z-index: 99;
 	right: 30px;
 	
 	padding: 10px 5px 10px 5px;
@@ -685,7 +686,7 @@ transition: all .3s;
 	margin-right: 100px;
 	position: absolute;
 	top: 100px;
-	z-index: 99999999999999;
+	z-index: 99;
 	left: 100px;
 	background-color:#CD2122;
 	padding: 10px 5px 10px 5px;
@@ -698,7 +699,7 @@ transition: all .3s;
 	margin-right: 100px;
 	position: absolute;
 	top: 480px;
-	z-index: 99999999999999;
+	z-index: 99;
 	left: 100px;
 	
 	padding: 10px 5px 10px 5px;
@@ -782,7 +783,7 @@ transition: all .3s;
     position: absolute !important;
     right: 0;
     top: 0;
-    z-index: 997;
+    z-index: 9999999999999999999;
 }
 .language-switcher {
   float: right;
@@ -812,3 +813,15 @@ width: 100%;
 text-align: center;
 padding-top: 10%;
 }
+
+
+.ba3 {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);   
+    width: 100%;
+    height: 100%;
+    position: fixed !important;
+    left: 0;
+    top: 0;
+    z-index: 998;
+}
+

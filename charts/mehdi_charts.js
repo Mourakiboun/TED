@@ -64,6 +64,27 @@ var append_electoral = "Electoral Data";
 var append_socio = "Socio-Economic Data";
 
 
+function shoow() {
+                
+                  $('#description-dash').addClass("dash-right-open");
+                  $("#overlay").addClass("ba3");
+                  $('#description-dash').scrollTop(); 
+                  document.body.style.overflowY = "hidden";
+                  //$("#ba3").show();
+
+                  }
+
+function hiide() {
+                 console.log("description dash clicked by event");
+                 //  $('#viz-detail').removeClass("dash-right-push-toleft");
+                  $('#description-dash').removeClass("dash-right-open");
+                $("#overlay").removeClass("ba3");
+                document.body.style.overflowY = "visible";
+                }
+
+
+
+
 function formatData()
 {
 	//format data as percentages

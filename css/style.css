@@ -807,6 +807,60 @@ direction:rtl;
 #about-holder{
 padding-top: 75px;
 }
+
+#intro-holder{
+	
+padding-top: 75px;
+padding-left: 75px;
+padding-right: 75px;
+}
+
+#toggle-view_intro {
+	 background: #2f4356;  
+	list-style:none;	
+	font-family:arial;
+	font-size:11px;
+	margin:0;
+	padding:0;
+	width:100%;
+}
+
+	#toggle-view_intro li {
+		background: #2f4356;  
+		margin:10px;
+		border-bottom:1px solid #ccc;
+		position:relative;
+		cursor:pointer;
+	}
+
+	#toggle-view_intro h1 {
+		background: #2f4356;  
+		font-size:18px;
+		color: white;
+	}
+	
+
+	#toggle-view_intro h5 {
+		background: #2f4356;  
+		font-size:14px;
+		color:white;
+		margin-left: 20px;
+
+	}
+
+	#toggle-view_intro span {
+		
+		position:absolute;
+		right:5px; top:0;	
+		font-size:13px;
+	}
+	
+	#toggle-view_intro .panel {
+		background: #2f4356;  
+		display:none;
+		padding-right: 10;
+
+	}
 #loading {
 height: 600px;
 width: 100%;

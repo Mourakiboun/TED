@@ -1,0 +1,95 @@
+<head>
+  <link rel="stylesheet" media="screen" href="css/style.css"/>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+
+
+
+</head>
+
+
+<body>
+
+<script>
+ 
+  $(document).ready(function () {
+  
+  $('#toggle-view_intro li').click(function () {
+
+    var text = $(this).children('div.panel');
+
+    if (text.is(':hidden')) {
+      text.slideDown('200');
+      $(this).children('span').html('-');   
+    } else {
+      text.slideUp('200');
+      $(this).children('span').html('+');   
+    }
+    
+  });
+
+});
+</script>
+<ul id="toggle-view_intro">
+  <li>
+    <h1>Overview</h1>
+    <span>+</span>
+    <div class="panel">
+      <h5>The charts section allows the viewer to compare and contrast Tunisia's latest election-related data as well as socio-economic data. Two charts have been provided in order for related data from different sources can be displayed simultaneously for the purpose of comparison and possible correlation.</br></br>This charts section does not attempt to analyze these datasets or suggest correlations. It is a platform for the public to interact with various datasets and draw one's own conclusion about the relationships that do or do not exist. </br></br></h5>
+    </div>
+  </li>
+   <li>
+    <h1>Datasets with different boundaries</h1>
+    <span>+</span>
+    <div class="panel">
+      <h5>Socio-economic data is gathered at the governorate level, unlike election results that are reported at the circonscription level. While election results can be displayed here at either level, socio-economic data and cannot be viewed at the circonscription level; please keep this in mind when comparing with election results at the circonscription level.</br></br></h5>
+    </div>
+  </li>
+<li>
+    <h1>Y-axis value</h1>
+    <span>+</span>
+    <div class="panel">
+      <h5>When comparing data between charts, please keep in mind the percentage value on the Y-axis will depend on the dataset and therefore may vary from one chart to another; please be aware this can affect whether or not there is a perceived correlation.</br></br></h5>
+    </div>
+  </li>
+  <li>
+    <h1>Timing of data collection</h1>
+    <span>+</span>
+    <div class="panel">
+      <h5>The socio-economic data was collected in 2009, whereas the election results are from 2011. Please remember that socio-economic data changes from year to year and therefore does not reflect the exact population statistics of the 2011 elections.</br></br></h5>
+    </div>
+  </li>
+  <li>
+    <h1>Population size</h1>
+    <span>+</span>
+    <div class="panel">
+      <h5>Election results are drawn from a population of citizens 18 years and older (those who are eligible to vote). for the socio-economic data, the underlying population size varies according to the type of data. For example, the "youth ratio" dataset refers to the percentage per governorate of young people between 15-34 in 2009 (need to check).  The following age ranges apply for these datasets: unemployment, illiteracy. Then define how big a household is.</br></br></h5>
+    </div>
+  </li>
+  <li>
+    <h1>Communications data</h1>
+    <span>+</span>
+    <div class="panel">
+      <h5>The socio-economic data provided about mobile, internet and computer coverage is measured at the household - not individual - level. (more data and definitions here)</br></br></h5>
+    </div>
+  </li>
+  <li>
+    <h1>Voters abroad</h1>
+    <span>+</span>
+    <div class="panel">
+      <h5>There are 6 circonscriptions outside of Tunisia for Tunisians voting abroad; these results are not incorporated into the data presented in this section.</br></br></h5>
+    </div>
+  </li>
+  <li>
+    <h1>Data sources</h1>
+    <span>+</span>
+    <div class="panel">
+      <h5>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.</br></br></h5>
+    </div>
+  </li>
+  
+</ul>
+
+
+
+</body>

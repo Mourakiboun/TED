@@ -801,6 +801,9 @@ float: right !important;
 #description-dash .ar {
 display:none !important;
 }
+#description-dash .fr {
+display:none !important;
+}
 .lang-ar{
 direction:rtl;
 }

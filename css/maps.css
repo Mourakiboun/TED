@@ -290,7 +290,7 @@
 .map-tooltip {
   
   
-  max-height:400px;
+  max-height:800px;
   
   }
  
@@ -560,7 +560,7 @@
     }
   .map-legend .key {
     background-repeat:no-repeat;
-    height:10px;
+    height:100px;
     width:200px;
     margin:0 auto;
     }
@@ -937,6 +937,8 @@ h3 .subtitles{
    min-width: 180px;
    position: fixed;
 }
+
+
 .map-tooltip {
    top: 100px;
   left: 20px;

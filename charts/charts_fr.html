@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
    <title>Tunisia Election Charts</title>
    <script src="https://www.google.com/jsapi"></script>
    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
@@ -42,6 +42,24 @@
               return $(this).prop('title');
           }
       });
+
+  $(document).ready(function () {
+  
+  $('#toggle-view li').click(function () {
+
+    var text = $(this).children('div.panel');
+
+    if (text.is(':hidden')) {
+      text.slideDown('200');
+      $(this).children('span').html('-');   
+    } else {
+      text.slideUp('200');
+      $(this).children('span').html('+');   
+    }
+    
+  });
+
+});
 </script>
 
 <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
@@ -49,6 +67,7 @@
 
 </head>
 <body style="background-color:#304458">
+<div  id="overlay" onclick="hiide()"></div>
 
 <div id="header-inner" class="container" style="background-color:#304458" margin="0px !important">
  
@@ -80,29 +99,29 @@
 </div>  <!--header inner  ends  --> 
 
 <div style="height:'100%' ; background-color:#FFF ; padding:20px">
-	<select id="first_select"></select>
-   	<select  multiple="multiple"  id="second_select"></select>
-   	<select id="chart_type">
+	<select id="first_select" title="<b>Les options des ensembles de données :</b></br>Cela permet de choisir parmi trois options pour chaque graphique à savoir les résultats des partis politiques, d'autres résultats électoraux, et les données socio-économiques. "></select>
+   	<select  multiple="multiple"  id="second_select" title='<b>Combinaisons des ensembles de données : </b></br>Ce menu affiche les données liées au premier ensemble de données.  Si vous sélectionnez « bulletins blancs » dans le premier menu, des ensembles de données qui partagent la même source apparaîtront dans le deuxième menu : bulletins annulés et les bulletins de vote gaspillé. Il est possible de voir une ou l&rsquo;ensemble des options de données dans le deuxième menu.'></select>
+   	<select id="chart_type" title='<b>Les graphiques linéaires  et les diagrammes à barres :</b></br> Ce menu permet de choisir entre  un graphique linéaire  ou un diagramme à barres à pour afficher les données. Veuillez noter qu’un graphique linéaire ici ne représente pas une série de valeurs liées, il est tout simplement une autre option pour la visualisation des données à un niveau administratif spécifique.'>
    	<optgroup label="Type de graphique">
    		<option value=1>Lignes</option>
    		<option value=2>Bars</option>
    	</optgroup>
    	</select> 
-      <select id="sort">
+      <select id="sort" title='<b>Ordre des données :</b></br> Ce menu propose trois options pour l&rsquo;ordre des données : par région géographique, ordre croissant ou décroissant. Veuillez noter que l&rsquo;option " Régions " est la façon dont l&rsquo;ISIE organise ses résultats - par région géographique et dans cet ordre : le Grand Tunis, au nord-est, nord-ouest, centre-ouest, centre est, sud-est, sud-ouest.'>
       <optgroup label="Ordre d'affichage">
          <option value=1>Par Regions</option>
          <option value=2>Croissant</option>
          <option value=3>Decroissant</option>
       </optgroup>
       </select>
-      <select id="level">
+      <select id="level" title='<b>Niveau administratif ou électoral :</b></br>Le cinquième menu a de différentes options pour plusieurs ensembles de données. Pour tous les résultats électoraux, on peut visualiser les données au niveau administratif des régions (gouvernorats) ou au niveau de la circonscription (Circonscriptions). Il ya 24 gouvernorats en Tunisie et 27 Circonscriptions (trois gouvernorats sont divisés en deux comme Circonscriptions).'>
       <optgroup label="Niveau d'affichage">
          <option value=1>Administratif</option>
          <option value=2>Electoral</option>
       </optgroup>
       </select> 
 
-    <a href="notes.html" id="notes" >Notes</a>   
+    <a onclick="shoow()" id="notes" >Remarques</a>   
    	<div id="chart"></div>
 
    	<select id="simple2"></select>
@@ -141,6 +160,11 @@
 </div>
 <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53611498665ace06"></script>
+​<script type="text/javascript">
+var addthis_config = addthis_config||{};
+addthis_config.data_track_addressbar = false;
+addthis_config.data_track_clickback = false;
+</script>
 <!-- AddThis Button END -->
       </div>
 
@@ -149,7 +173,96 @@
      	<div id="chart2"></div>
 </div> 
 
+<div id="viz-detail" class="dash-right-push" >
+<div id="description-dash" class="dash-right dash-right-vertical dash-right-right" style="top:55px;padding-top: 0;">
+<span id="notes_h1"><h3>Remarques</h3></span></br>
 
+<span id="notes_text">Veuillez notez les détails et les exceptions suivantes lors de l'affichage des données dans la section des graphiques.</span></br></br>
+
+
+<ul id="toggle-view">
+  <li>
+    <h1>Aperçu</h1>
+    <span>+</span>
+    <div class="panel">
+      <h5>La section des graphiques permet de comparer et de différencier  les données électorales et socio-économiques en Tunisie. Deux graphiques ont été fournis pour que les données connexes provenant de différentes sources puissent être affichées simultanément pour des fins de comparaison et corrélation possible.</br></br>Cette section n’est pas conçue pour analyser ces ensembles de données ou de suggérer des corrélations. Il s'agit d'une plate-forme qui a pour but d’interagir avec différents ensembles de données et d'en tirer des conclusions. </br></br></h5>
+    </div>
+  </li>
+   <li>
+    <h1>Données à différents niveaux</h1>
+    <span>+</span>
+    <div class="panel">
+      <h5>Contrairement aux résultats électoraux  au niveau de la circonscription, les données socio-économiques sont recueillies au niveau du gouvernorat. Bien que les résultats des élections puissent être affichés que ce soit au niveau du gouvernorat ou de la circonscription, les données socio-économiques ne peuvent être consultées sur le niveau de circonscription. Veuillez prendre cela en compte lorsque l'on compare avec les résultats des élections au niveau de la circonscription.</br></br></h5>
+    </div>
+  </li>
+<li>
+    <h1>Valeurs des axes</h1>
+    <span>+</span>
+    <div class="panel">
+      <h5>Lorsque l'on compare les données entre les graphiques, veuillez garder à l'esprit que  la valeur de pourcentage sur l'axe Y dépendra de l'ensemble de données et peut donc varier d'une carte à l'autre.</br></br></h5>
+    </div>
+  </li>
+  <li>
+    <h1>Référence  des données</h1>
+    <span>+</span>
+    <div class="panel">
+      <h5>Les données socio-économiques ont été recueillies en 2009, alors que les résultats électoraux proviennent de 2011. Rappelez-vous que les modifications de données socio-économiques d'une année à l’autre ne reflètent donc pas les statistiques démographiques exactes des élections de 2011.</br></br></h5>
+    </div>
+  </li>
+  <li>
+    <h1>Taille de la population</h1>
+    <span>+</span>
+    <div class="panel">
+      <h5>Les résultats des élections sont établis à partir d'une population de citoyens de 18 ans et plus (électeurs potentiels). En ce qui concerne les données socio-économiques, la taille de la population concernée varie en fonction du type de données. Par exemple, le fichier " Ratio de la jeunesse " désigne le pourcentage par gouvernorat de jeunes de 15-34 ans en 2009 (à vérifier). Les tranches d'âge suivantes s'appliquent pour ces ensembles de données : <i>le chômage, l’analphabétisme. Ensuite, définir la taille du ménage.</i></br></br></h5>
+    </div>
+  </li>
+  <li>
+    <h1>Les données de communications</h1>
+    <span>+</span>
+    <div class="panel">
+      <h5>Les données socio-économiques fournies concernant la couverture de réseaux mobiles, internet et possession d'ordinateur sont  mesurées au niveau du ménage et non pas au niveau individuel. (Plus de données et définitions ici)</br></br></h5>
+    </div>
+  </li>
+  <li>
+    <h1>Électeurs résidant à  l'étranger</h1>
+    <span>+</span>
+    <div class="panel">
+      <h5>Il ya 6 circonscriptions pour les Tunisiens à l’étranger; ces résultats ne sont pas intégrés dans les données présentées dans cette section.</br></br></h5>
+    </div>
+  </li>
+  <li>
+    <h1>Sources de données</h1>
+    <span>+</span>
+    <div class="panel">
+      <h5>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.</br></br></h5>
+    </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+</div>
+
+
+
+
+<footer id="footer" class="clearfix">
+  <div id="footer-inner" class="container">
+    <div class="row"> 
+      
+     A project exploring open data
+     <span class="footer-text float-right">
+      <a href="http://www.mourakiboun.org/">Mourakiboun</a>
+     |<a href="http://www.democracyinternational.com">Democracy International</a>
+     | <a href="http://newrightsgroup.net">New Rights Group</a>
+     | <a href="http://developmentseed.org">DevelopmentSeed</a>
+     </span> 
+    
+    </div>
+  </div>
+</footer>
 
    
 </body>

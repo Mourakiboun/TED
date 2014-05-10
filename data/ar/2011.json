@@ -1,4 +1,16 @@
 [
+      {
+        "_id": "14",
+        "lang": "ar", "learn":" المزيد  ",
+        "title": "<div style='text-align: right; '>Résumé</div>",
+        "subtitle": "<div style='text-align: right; '>Résumé</div>",
+        "excerpt":"<div style='text-align: right; '>Les élections de l'Assemblée Nationale Constituante a permis de désigner le corps chargé de rédiger une nouvelle constitution et de former un gouvernement de transition. Ces élections ont été le résultat d'une révolution qui a abouti au départ d’un régime autoritaire afin d’élire un nouveau gouvernement démocratique. </div>",
+        "description": "",
+        "about_data": "",
+        "methodology": "",
+        "picture": "img/projects/intro.png", 
+        "map": ""
+    },
       {   "_id": "1",
     "lang": "ar", "learn":" المزيد  ",
         "title": "<div style='text-align: right; '>توزيع الأصوات الداعمة للنهضة</div>",

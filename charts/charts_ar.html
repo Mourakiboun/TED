@@ -14,7 +14,9 @@
    <!--social-->
    <script type="text/javascript">var switchTo5x=true;</script>
 <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">stLight.options({publisher: "b44119a1-eb33-492e-8b7d-d18b72fa34ac", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+<script type="text/javascript">stLight.options({publisher: "b44119a1-eb33-492e-8b7d-d18b72fa34ac", doNotHash: true, doNotCopy: true, hashAddressBar: false});
+
+</script>
       
 <!--google web font-->
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' type='text/css'>
@@ -42,6 +44,23 @@
               return $(this).prop('title');
           }
       });
+  $(document).ready(function () {
+  
+  $('#toggle-view li').click(function () {
+
+    var text = $(this).children('div.panel');
+
+    if (text.is(':hidden')) {
+      text.slideDown('200');
+      $(this).children('span').html('-');   
+    } else {
+      text.slideUp('200');
+      $(this).children('span').html('+');   
+    }
+    
+  });
+
+});
 </script>
 
 <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
@@ -49,6 +68,7 @@
 
 </head>
 <body style="background-color:#304458">
+<div  id="overlay" onclick="hiide()"></div>
 
 <div id="header-inner" class="container" style="background-color:#304458" margin="0px !important">
  
@@ -80,50 +100,50 @@
 </div>  <!--header inner  ends  --> 
 
 <div dir="rtl" style="height:'100%' ;  background-color:#FFF ; padding:20px">
-	<select id="first_select" ></select>
-   	<select  multiple="multiple"  id="second_select"></select>
-   	<select id="chart_type">
+	<select id="first_select" title="<p align='right'><b>Dataset options:</b></br>For each chart, one may choose from three dataset options: political party results, other election results, and socio-economic data. </p>"></select>
+   	<select  multiple="multiple"  id="second_select" title='<p align="right"><b>Dataset combinations:</b></br>This menu displays data from the same source as the first dataset. For example, if you select "blank ballots" in the first menu, related datasets that share the same source will appear in the second menu: cancelled ballots and wasted ballots. It is possible to view one or all of the data options in the second menu.</p>'></select>
+   	<select id="chart_type" title='<p align="right"><b>Line vs. bar chart:</b></br>  This menu allows the viewer to select either a line or bar chart to display the data. Note: a line graph here does not represent a series of related values, it is simply another option for visualizing data at a specific administrative level.</p>'>
    	<optgroup label="نوع الرسم البياني">
    		<option value=1>خطوط</option>
    		<option value=2>أعمدة</option>
    	</optgroup>
    	</select> 
-      <select id="sort">
-      <optgroup label="Sorting order">
-         <option value=1>By Regions</option>
-         <option value=2>Ascending</option>
-         <option value=3>Descending</option>
+      <select id="sort" title='<p align="right"><b>Sorting order:</b></br> This menu has three options for the data order: by geographical region, ascending order or descending order. Note: the “region” option is how Tunisia’s electoral management body, the ISIE, organizes its results - according to geographical region and in this order: greater Tunis, north east, north west, center west, center east, south east, south west.</p>'>
+      <optgroup label="ترتيب البيانات">
+         <option value=1>حسب الجهات</option>
+         <option value=2>تنازلي</option>
+         <option value=3>تصاعدي</option>
       </optgroup>
       </select>
-      <select id="level">
-      <optgroup label="show level">
-         <option value=1>Governorate Level</option>
-         <option value=2>Circonscription Level</option>
+      <select id="level"  title='<p align="right"><b>Administrative or electoral level:</b></br> the fifth menu has different options for different datasets. For all election results, one can view data at the administrative district level (governorates) or the electoral district level (circonscriptions). There are 24 governorates in Tunisia and 27 circonscriptions (three governorates are divided into two as circonscriptions)</p>'>
+      <optgroup label="عرض البيانات">
+         <option value=1>حسب الولايات</option>
+         <option value=2>حسب الدوائر الإنتخابية</option>
       </optgroup>
       </select> 
 
-    <a href="notes.html" id="notes_ar" >معلومات</a>   
+    <a onclick="shoow()" id="notes_ar" >معلومات</a>   
    	<div id="chart"></div>
 
    	<select id="simple2"></select>
    	<select  multiple="multiple"  id="jeux2"></select>
    	<select id="switch2">
-   	<optgroup label="Chart Type">
-   		<option value=1>Line Chart</option>
-   		<option value=2>Bar Chart</option>
+   	<optgroup label="نوع الرسم البياني">
+   		<option value=1>خطوط</option>
+   		<option value=2>أعمدة</option>
    	</optgroup>
    	</select> 
       <select id="sort2">
-      <optgroup label="Sorting order">
-         <option value=1>By Regions</option>
-         <option value=2>Ascending</option>
-         <option value=3>Descending</option>
+      <optgroup label="ترتيب البيانات">
+         <option value=1>حسب الجهات</option>
+         <option value=2>تنازلي</option>
+         <option value=3>تصاعدي</option>
       </optgroup>
       </select>
       <select id="level2">
-      <optgroup label="show level">
-         <option value=1>Governorate Level</option>
-         <option value=2>Circonscription Level</option>
+      <optgroup label="عرض البيانات">
+         <option value=1>حسب الولايات</option>
+         <option value=2>حسب الدوائر الإنتخابية</option>
       </optgroup>
       </select>    
 
@@ -141,6 +161,11 @@
 </div>
 <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53611498665ace06"></script>
+​<script type="text/javascript">
+var addthis_config = addthis_config||{};
+addthis_config.data_track_addressbar = false;
+addthis_config.data_track_clickback = false;
+</script>
 <!-- AddThis Button END -->
       </div>
 
@@ -149,7 +174,93 @@
      	<div id="chart2"></div>
 </div> 
 
+<div id="viz-detail" class="dash-right-push" style='text-align: right; '>
+<div id="description-dash" class="dash-right dash-right-vertical dash-right-right" style="top:55px;padding-top: 0;">
+<span id="notes_h1"><h3>Notes</h3></span></br>
 
+<span id="notes_text">Note the following details and exceptions when viewing data in the charts section.</span></br></br>
+
+
+<ul id="toggle-view">
+  <li>
+    <h1>Overview</h1>
+    <span>+</span>
+    <div class="panel">
+      <h5>The charts section allows the viewer to compare and contrast Tunisia's latest election-related data as well as socio-economic data. Two charts have been provided in order for related data from different sources can be displayed simultaneously for the purpose of comparison and possible correlation.</br></br>This charts section does not attempt to analyze these datasets or suggest correlations. It is a platform for the public to interact with various datasets and draw one's own conclusion about the relationships that do or do not exist. </br></br></h5>
+    </div>
+  </li>
+   <li>
+    <h1>Datasets with different boundaries</h1>
+    <span>+</span>
+    <div class="panel">
+      <h5>Socio-economic data is gathered at the governorate level, unlike election results that are reported at the circonscription level. While election results can be displayed here at either level, socio-economic data and cannot be viewed at the circonscription level; please keep this in mind when comparing with election results at the circonscription level.</br></br></h5>
+    </div>
+  </li>
+<li>
+    <h1>Y-axis value</h1>
+    <span>+</span>
+    <div class="panel">
+      <h5>When comparing data between charts, please keep in mind the percentage value on the Y-axis will depend on the dataset and therefore may vary from one chart to another; please be aware this can affect whether or not there is a perceived correlation.</br></br></h5>
+    </div>
+  </li>
+  <li>
+    <h1>Timing of data collection</h1>
+    <span>+</span>
+    <div class="panel">
+      <h5>The socio-economic data was collected in 2009, whereas the election results are from 2011. Please remember that socio-economic data changes from year to year and therefore does not reflect the exact population statistics of the 2011 elections.</br></br></h5>
+    </div>
+  </li>
+  <li>
+    <h1>Population size</h1>
+    <span>+</span>
+    <div class="panel">
+      <h5>Election results are drawn from a population of citizens 18 years and older (those who are eligible to vote). for the socio-economic data, the underlying population size varies according to the type of data. For example, the "youth ratio" dataset refers to the percentage per governorate of young people between 15-34 in 2009 (need to check).  The following age ranges apply for these datasets: unemployment, illiteracy. Then define how big a household is.</br></br></h5>
+    </div>
+  </li>
+  <li>
+    <h1>Communications data</h1>
+    <span>+</span>
+    <div class="panel">
+      <h5>The socio-economic data provided about mobile, internet and computer coverage is measured at the household - not individual - level. (more data and definitions here)</br></br></h5>
+    </div>
+  </li>
+  <li>
+    <h1>Voters abroad</h1>
+    <span>+</span>
+    <div class="panel">
+      <h5>There are 6 circonscriptions outside of Tunisia for Tunisians voting abroad; these results are not incorporated into the data presented in this section.</br></br></h5>
+    </div>
+  </li>
+  <li>
+    <h1>Data sources</h1>
+    <span>+</span>
+    <div class="panel">
+      <h5>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.</br></br></h5>
+    </div>
+  </li>
+  
+</ul>
+
+
+</div>
+
+</div>
+
+<footer id="footer" class="clearfix">
+  <div id="footer-inner" class="container">
+    <div class="row"> 
+      
+     A project exploring open data
+     <span class="footer-text float-right">
+      <a href="http://www.mourakiboun.org/">Mourakiboun</a>
+     |<a href="http://www.democracyinternational.com">Democracy International</a>
+     | <a href="http://newrightsgroup.net">New Rights Group</a>
+     | <a href="http://developmentseed.org">DevelopmentSeed</a>
+     </span> 
+    
+    </div>
+  </div>
+</footer>
 
    
 </body>

@@ -655,14 +655,14 @@ transition: all .3s;
 	color: white;
 	font-size: 15px;
 	font-weight: bolder;
-	margin-right: 250px;
+	margin-right: 100px;
 	position: absolute;
 	top: 130px;
 	z-index: 99;
 	right: 30px;
 	background-color:#CD2122;
 	padding: 10px 5px 10px 5px;
-    width: 170px;
+    width: 150px;
     text-align: center;
 }
 
@@ -687,10 +687,10 @@ transition: all .3s;
 	position: absolute;
 	top: 120px;
 	z-index: 99;
-	left: 400px;
+	left: 100px;
 	background-color:#CD2122;
 	padding: 10px 5px 10px 5px;
-    width: 170px;
+    width: 150px;
     text-align: center;
 }
 

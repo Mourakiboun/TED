@@ -32,7 +32,7 @@ function(template){
      if(document.URL.indexOf("14") > -1) 
       {
             $(this.el).empty();
-             //this.$el.html(this.template(this.model.attributes));
+             
               if (window.tnelec.router.language=="fr")   
            document.getElementById('content').innerHTML = desc_fr;
          else  if (window.tnelec.router.language=="ar")   
@@ -53,27 +53,18 @@ function(template){
                
 		},
                 showDash: function() {
-                var showDashButton=document.getElementById( 'showDash' ),
-                  mapZone=document.getElementById( 'viz-detail' ),
-                  descriptionDash=document.getElementById('description-dash');
+                
                   
                   $('#description-dash').addClass("dash-right-open");
-                  //$('#showDash').removeClass("showdash-right");
-                  $('#showDash').hide();
-                  //$("#overlay").addClass("overlay_bk");
+                  
                   },
 
                 hideDash: function() {
-                 console.log("description dash clicked by event");
-                 var showDashButton=document.getElementById( 'showDash' ),
-                 mapZone=document.getElementById( 'viz-detail' ),
-                 descriptionDash=document.getElementById('description-dash');
-                 //  $('#viz-detail').removeClass("dash-right-push-toleft");
+                 
+                 
                    $('#description-dash').removeClass("dash-right-open");
 
-                    $('#showDash').addClass("showdash-right");
-                    $('#showDash').show();
-               // $("#overlay").removeClass("overlay_bk");
+                    
                 }
               
 	});

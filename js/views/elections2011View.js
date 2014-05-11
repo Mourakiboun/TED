@@ -4,8 +4,10 @@ function(ItemView,viz){
 	var election2011View = Backbone.View.extend({
 		el:'#content',
 		initialize: function(){
-                   $(window).scrollTop(); 
-                   this.render();	 
+                   
+                   this.render();
+                   $(window).scrollTop(); 	
+
 		},
 		render: function(){
                   $(this.el).empty(); 

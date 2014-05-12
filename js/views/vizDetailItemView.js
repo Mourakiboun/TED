@@ -13,8 +13,8 @@ function(template){
 		initialize: function(){
 
                          $(window).scrollTop(); 
-                  	  this.render();
-                          this.model.on('change',this.render,this);
+                  	     this.render();
+                         this.model.on('change',this.render,this);
 
 
 		},

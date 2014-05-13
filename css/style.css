@@ -8,6 +8,8 @@ body {
 	font-weight: 400;
 	line-height: 1.5em;
         font-family:'Raleway', Arial, Helvetica, sans-serif ;
+        max-width: 100%;
+        overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -390,19 +392,22 @@ nav#main_menu > ul > li.active > a, nav#main_menu > ul > li > a:hover, nav#main_
 }
 .elections-bg-img {
     background-attachment: scroll;
-    background-position:50% 765px;
+    background-position:50% 76%;
+
     background-clip: border-box;
     background-color: transparent;
     background-image: url("../img/elections-bg.jpg");
     background-origin: padding-box;
     background-repeat: repeat;
     background-size: cover;
+    max-width: 100%;
 }
 .elections-bg-color {
   background: none repeat scroll 0 0 rgba(217, 14, 14, 0.698);
-  height: 582px;
+  height: 76%;
   padding: 153px 0;
   width: 100%;
+  max-width: 100%;
 }
 .elections-detail-text {
   border-left: 25px solid #000000;
@@ -498,7 +503,7 @@ nav#main_menu > ul > li.active > a, nav#main_menu > ul > li > a:hover, nav#main_
 		border-color: #34495E;
 		}
         #home-splash {
-	height:760px;
+	height:76%;
 	width: 100%;
 	background: url("../img/landing.png") repeat scroll 0 0 rgba(0, 0, 0, 0.5);
         background-size: cover;

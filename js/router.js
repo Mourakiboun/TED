@@ -72,6 +72,7 @@ var Router = Backbone.Router.extend({
         if(this.language=='en')
         this.aboutModel.goToEnglish();
        this.aboutView.render();
+       this.headerview.selectMenuItem('menu-about','about',0);
     },
     elections2013: function () {
       this.elections2013model=new Election2013Model()

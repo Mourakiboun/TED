@@ -10,10 +10,17 @@ function(ItemView,viz){
 
 		},
 		render: function(){
+          var desc = '<div class="story-main-space lang-en" style="min-height: 100px;"><div class="col-lg-12 col-md-12 col-sm-12"><span style="font-size:30;font-family: Arial;color: white;vertical-align:-35px;">2011 Tunisian Elections Summary</span><a style="float:right" class="button" href="#2011/14"><h4>Learn more</h4></a></div></div>' ;
+          var desc_fr = '<div class="story-main-space lang-fr" style="display:none; min-height: 100px;"><div class="col-lg-12 col-md-12 col-sm-12"><span style="font-size:30;font-family: Arial;color: white;vertical-align:-35px;">Résumé des élections tunisiennes de 2011</span><a style="float:right" class="button" href="#2011/14"><h4>Lire la suite</h4></a></div></div>' ;
+          var desc_ar = '<div class="story-main-space lang-ar" style="display:none; min-height: 100px;"><div class="col-lg-12 col-md-12 col-sm-12"><span style="font-size:30;font-family: Helve;color: white;vertical-align:-35px;">ملخص كذا خذا كذا خذا ...</span><a style="float:left" class="button" href="#2011/14"><h4>المزيد</h4></a></div></div>' ;
                   $(this.el).empty(); 
+                  $(this.el).append(desc);
+                  $(this.el).append(desc_fr);
+                  $(this.el).append(desc_ar);
+
                   var electionItems = this.model.models;
         	  var len = electionItems.length;
-                  for (var i = 0; i < len; i++) {
+                  for (var i = 1; i < len; i++) {
                     var currentItem= new ItemView({model:electionItems[i]});
                         currentItem.render();
 		      $(this.el).append(currentItem.el);

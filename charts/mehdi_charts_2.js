@@ -237,7 +237,7 @@ function drawChart() {
       var tit = "" + data.getColumnLabel(selectt);
       for (var i = 2; i < NewData.length; i++) 
       {
-         tit += " Versus " + data.getColumnLabel(NewData[i]);
+         tit += " / " + data.getColumnLabel(NewData[i]);
       }
       options.title = tit;
       
@@ -293,7 +293,7 @@ function drawChart() {
       viewCirc.setColumns(NewData);
       tit = "" + data.getColumnLabel(selectt);
       for (var i = 2; i < NewData.length; i++) 
-      {tit += " Versus " + data.getColumnLabel(NewData[i]);}
+      {tit += " / " + data.getColumnLabel(NewData[i]);}
       options.title = tit;
       
       // update the chart

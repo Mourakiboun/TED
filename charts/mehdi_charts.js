@@ -58,7 +58,7 @@ var dataGov;
 var dataCirc;
 
 var file = "final.csv";
-var notice = "You cannot display these data on the electoral level, you will be redirected to the administrative level";
+var notice = "You cannot display these data on the electoral level, you will be redirected to the administrative level !";
 var append_results = "Parties Results";
 var append_electoral = "Electoral Data";
 var append_socio = "Socio-Economic Data";
@@ -239,7 +239,7 @@ function updateChart(NewColumns)
 
 	options.title = "" + data.getColumnLabel(selected);
 	for (var i = 2; i < NewColumns.length; i++) 
-		options.title += " Versus " + data.getColumnLabel(NewColumns[i]);
+		options.title += " / " + data.getColumnLabel(NewColumns[i]);
 
 	//get the right order
 	if (order == 2)
@@ -272,14 +272,14 @@ function drawChart() {
 
    if(document.URL.indexOf("charts_fr") > -1) {
       file ="final_fr.csv";
-      notice = "Ces donnees ne peuvent pas etre affichees au niveau electoral, vous allez etre rediriges vers le niveau administratif";
+      notice = "Ces donnees ne peuvent pas etre affichees au niveau electoral, vous allez etre rediriges vers le niveau administratif !";
       append_results = "Resultats des partis";
       append_electoral = "Donnees Electorales";
       append_socio = "Donnees Socio-economiques";
    }
    else if(document.URL.indexOf("charts_ar") > -1) {
       file ="final_ar.csv";
-      notice = "Ces donnees ne peuvent pas etre affichees au niveau electoral, vous allez etre rediriges vers le niveau administratif";
+      notice = "لا يمكن عرض هذه البيانات بشكل صحيح على مستوى الدوائر الانتخابية، ستتم إعادة توجيهكم إلى مستوى الولايات !";
       append_results = "نتائج الأحزاب";
       append_electoral = "معطيات إنتخابية";
       append_socio = "معطيات إجتماعية و إقتصادية";

@@ -6,17 +6,25 @@ function(ItemView,viz){
 		initialize: function(){
                    
                    this.render();
+                   this.model.on('change',this.render,this);
                    $(window).scrollTop(); 	
 
 		},
 		render: function(){
-          var desc = '<div class="story-main-space lang-en" style="min-height: 100px;"><div class="col-lg-12 col-md-12 col-sm-12"><span style="font-size:30;font-family: Arial;color: white;vertical-align:-35px;">2011 Tunisian Elections Summary</span><a style="float:right" class="button" href="#2011/14"><h4>Learn more</h4></a></div></div>' ;
-          var desc_fr = '<div class="story-main-space lang-fr" style="display:none; min-height: 100px;"><div class="col-lg-12 col-md-12 col-sm-12"><span style="font-size:30;font-family: Arial;color: white;vertical-align:-35px;">Résumé des élections tunisiennes de 2011</span><a style="float:right" class="button" href="#2011/14"><h4>Lire la suite</h4></a></div></div>' ;
-          var desc_ar = '<div class="story-main-space lang-ar" style="display:none; min-height: 100px;"><div class="col-lg-12 col-md-12 col-sm-12"><span style="font-size:30;font-family: Helve;color: white;vertical-align:-35px;">ملخص كذا خذا كذا خذا ...</span><a style="float:left" class="button" href="#2011/14"><h4>المزيد</h4></a></div></div>' ;
+      console.log("ahlmaaaa");
+          var desc = '<div class="story-main-space lang-en"  style="min-height: 100px;"><div class="col-lg-12 col-md-12 col-sm-12"><span style="font-size:30;font-family: Arial;color: white;vertical-align:-35px;">2011 Tunisian Elections Summary</span><a style="float:right" class="button" href="#2011/14"><h4>Learn more</h4></a></div></div>' ;
+          var desc_fr = '<div class="story-main-space lang-fr"  style="min-height: 100px;"><div class="col-lg-12 col-md-12 col-sm-12"><span style="font-size:30;font-family: Arial;color: white;vertical-align:-35px;">Résumé des élections tunisiennes de 2011</span><a style="float:right" class="button" href="#2011/14"><h4>Lire la suite</h4></a></div></div>' ;
+          var desc_ar = '<div class="story-main-space lang-ar"  style="min-height: 100px;"><div class="col-lg-12 col-md-12 col-sm-12"><span style="font-size:30;font-family: Helve;color: white;vertical-align:-35px;">ملخص كذا خذا كذا خذا ...</span><a style="float:left" class="button" href="#2011/14"><h4>المزيد</h4></a></div></div>' ;
+                  
                   $(this.el).empty(); 
-                  $(this.el).append(desc);
-                  $(this.el).append(desc_fr);
+                  if (window.tnelec.router.language=="fr") 
+                    $(this.el).append(desc_fr);
+                  else if (window.tnelec.router.language=="ar") 
                   $(this.el).append(desc_ar);
+                  else
+                  $(this.el).append(desc);
+                  
+                  
 
                   var electionItems = this.model.models;
         	  var len = electionItems.length;

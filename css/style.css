@@ -816,8 +816,31 @@ display:none !important;
 .lang-ar{
 direction:rtl;
 }
-#about-holder{
+#about-holder_{
 padding-top: 75px;
+padding-right: 150px;
+}
+#about-holder_ar{
+font-size: 17px;
+padding-top: 75px;
+padding-left: 150px;
+}
+
+#about_sidebar_{
+     position:absolute;
+     right: 25;
+     top: 225;
+     bottom: 0;
+}
+
+
+#about_sidebar_ar{
+
+	direction: rtl;
+     position:absolute;
+     left: 25;
+     top: 225;
+     bottom: 0;
 }
 
 #intro-holder{

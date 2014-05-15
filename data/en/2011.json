@@ -151,6 +151,18 @@
         "methodology": "<h4>1. Import data to PostGIS</h4>To set up the a table with appropriate columns, run the following SQL:<br/><pre><br/>create table blank (<br/>cir_id int,<br/>circ_name text,<br/>total_votes numeric,<br/>votes_ennahdha numeric,<br/>votes_cpr numeric,<br/>votes_fdtl numeric,<br/>other_winning numeric,<br/>Wasted numeric,<br/>Blank_ballots numeric,<br/>cancelled_ballots numeric<br/>);<br/></pre><br/>Now run the following from your command line to populate the table: <br/><pre><br/>blank-votes.csv | psql -d tunisia -c \"COPY blank FROM STDIN WITH DELIMITER ',' CSV HEADER\"<br/></pre><h4>2. Dissolving Delegations into Districts</h4><p>*Note: If you have already performed this step for the Political parties map, you can skip to step 4.*<br/>Since this data has a district-level resolution, we need to create district polygons out of [delegation polygons that we already imported](https://github.com/fwelections/tunisia-election-data/tree/master/shapes).<br/>To do this you'll need to load the `filter_rings()` function explained in [this post](http://www.spatialdbadvisor.com/postgis_tips_tricks/92/filtering-rings-in-polygon-postgis). This  functions removes artifacts left by unioning each district's member delegations. Once you've loaded [the function](https://gist.github.com/ian29/5091516) into your database, run the following query.<br/><pre><br/>create table districts as (<br/>select<br/>circo_id,<br/>filter_rings(st_union(the_geom),2) as the_geom<br/>from delegations<br/>group by circo_id<br/>);<br/></pre><h4>4. Joining to geometry</h4><p>You should now be able to open the [Blank votes tilemill project](!SITE.GITHUB!/tree/gh-pages/map-src/blank)<br/>We're joining the tabular data to geometry in TileMill's PostGIS plugin. The query is here for your reference, but you should need to perform any further steps.</p> <br/><pre><br/>( select<br/>the_geom,<br/>cir_id,<br/>circ_name,<br/>blank_ballots,<br/>cancelled_ballots,<br/>wasted,<br/>map,<br/>total_votes,<br/>round((map / total_votes * 100)) as pct_n,<br/>cast(round((map / total_votes * 100)) as text)||'%' as pct_s,<br/>cast(round((map / total_votes * 100)) as text)||'%'||E' \n'||circ_name as display<br/>from districts a join blank b <br/>on circo_id = cir_id <br/>) as data<br/></pre> ",
         "picture": "img/projects/blanc.png", 
         "map": "tunisia.map-u3z7fdnm,mehdi118218.hifi40b0"
+    },
+    {   
+    "_id": "12",
+    "lang": "en", "learn":" Learn more",
+        "title": "Visualizing the representation in the NCA (Turnout vs #Seats)",
+        "excerpt":"Lorem ipsum kadharum ip lsoqd juie polirute sitopeste osis...",
+        "subtitle": "Representation",
+        "description": "Lorem ipsum kadharum ip lsoqd juie polirute sitopeste osis...",
+        "about_data": "",
+        "methodology": "",
+        "picture": "img/projects/repr_turn.png", 
+        "map": "tunisia.map-u3z7fdnm,mehdi118218.i6e99i2g"
     }
    
 ]

@@ -42,10 +42,10 @@ var cste = {
  };
 
 
-var selected = cste.NAHDHA;
-var line = cste.lineChart;
+var selected = cste.Eligible;
+var line = cste.barChart;
 var order = cste.ord_regi;
-var lvl= cste.lvl_gov;
+var lvl= cste.lvl_circ;
 
 var data;
 var chart;
@@ -59,7 +59,7 @@ var dataCirc;
 
 var file = "final.csv";
 var notice = "You cannot display these data on the electoral level, you will be redirected to the administrative level !";
-var append_results = "Parties Results";
+var append_results = "Party Results";
 var append_electoral = "Electoral Data";
 var append_socio = "Socio-Economic Data";
 
@@ -124,20 +124,24 @@ function defaultAppendOptions(arrayData)
       $("#first_select").append("<option value='" + 25 + "'>" + arrayData[0][25] + "</option>");
 
    $('<optGroup/>').attr('label',append_electoral).appendTo($("#first_select"));
-   for (var i = cste.Eligible; i <= cste.Passively_Turnout; i++) {
+    $("#first_select").append("<option value='" + 6 + "'selected>" + arrayData[0][6] + "</option");
+   for (var i = cste.Eligible+1; i <= cste.Passively_Turnout; i++) {
       $("#first_select").append("<option value='" + i + "'>" + arrayData[0][i] + "</option");}
 
    $('<optGroup/>').attr('label',append_socio).appendTo($("#first_select"));
    for (var i = cste.Youth; i <= cste.Unemployment_Education; i++) {
       $("#first_select").append("<option value='" + i + "'>" + arrayData[0][i] + "</option");}
+
+      
    
 
    // determine default selected items
-   for (var i = cste.NAHDHA; i <= cste.PDP; i++) {
+   /*for (var i = cste.NAHDHA; i <= cste.PDP; i++) {
       if (i == selected) continue;
       $("#second_select").append("<option value='" + i + "'>" + arrayData[0][i] + "</option");
       }
-      $("#second_select").append("<option value='" + 25 + "'>" + arrayData[0][25] + "</option");
+      $("#second_select").append("<option value='" + 25 + "'>" + arrayData[0][25] + "</option");*/
+      $("#second_select").append("<option value='" + 14 + "'>" + arrayData[0][14] + "</option");
 
      
 
@@ -313,12 +317,13 @@ function drawChart() {
    viewCirc = new google.visualization.DataView(dataCirc);
      
 
-   var NewColumns = [0,1];
+   var NewColumns = [0,6];
    viewGov.setColumns(NewColumns);
+   viewCirc.setColumns(NewColumns);
    
 
    //set the Charts options
-   options = {'title': data.getColumnLabel(1),
+   options = {'title': data.getColumnLabel(6),
                   'width':'100%',
                   'height':'300',
                   'curveType': 'function',
@@ -341,7 +346,7 @@ function drawChart() {
       // determine selected item and show an empty multiple select 
       selected = +$("#first_select option:selected").val();
       document.getElementById('level').style.display = 'inline';
-      if (selected == cste.Eligible || selected >= cste.Youth && selected != 25)
+      if (selected >= cste.Youth && selected != 25)
       {
       	if (lvl == cste.lvl_circ)
       		alert(notice);

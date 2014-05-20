@@ -4,15 +4,15 @@ google.setOnLoadCallback(drawChart);
 
 var file = "final.csv";
 var notice = "You cannot display these data on the electoral level, you will be redirected to the administrative level";
-var append_results = "Parties Results";
+var append_results = "Party Results";
 var append_electoral = "Electoral Data";
 var append_socio = "Socio-Economic Data";
 
 
 
 function drawChart() {
-   var line = 1;
-   var lvl = 1;
+   var line = 2;
+   var lvl = 2;
    var order = 1;
    var selectt = 1;
 
@@ -128,8 +128,8 @@ function drawChart() {
 
    //update the chart
    var chart ;
-   chart = new google.visualization.LineChart(document.getElementById('chart2'));
-   chart.draw(viewGov, options);
+   chart = new google.visualization.ColumnChart(document.getElementById('chart2'));
+   chart.draw(viewCirc, options);
 
    /*if (line == 2) chart = new google.visualization.ColumnChart(document.getElementById('chart'));
    else chart = new google.visualization.LineChart(document.getElementById('chart'));
@@ -143,7 +143,7 @@ function drawChart() {
       selectt = +$("#simple2 option:selected").val();
 
       document.getElementById('level2').style.display = 'inline';
-      if (selectt == cste.Eligible || selectt >= cste.Youth && selectt != 25)
+      if ( selectt >= cste.Youth && selectt != 25)
       {
          if (lvl == cste.lvl_circ)
             alert(notice);

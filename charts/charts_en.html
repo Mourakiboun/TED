@@ -105,7 +105,7 @@
 
 <div style="height:'100%' ; background-color:#FFF ; padding:20px">
 	<select id="first_select" title="<b>Dataset options:</b></br>For each chart, one may choose from three dataset options: political party results, other election results, and socio-economic data. "></select>
-   	<select  multiple="multiple"  id="second_select" title='<b>Dataset combinations:</b></br>This menu displays data from the same source as the first dataset. For example, if you select "blank ballots" in the first menu, related datasets that share the same source will appear in the second menu: cancelled ballots and wasted ballots. It is possible to view one or all of the data options in the second menu.'></select>
+   	<select  multiple="multiple"  id="second_select" title='<b>Dataset combinations:</b></br>This menu displays data from the same source as the first dataset. For example, if you select “blank ballots” in the first menu, related datasets that share the same source will appear in the second menu: cancelled ballots and wasted ballots. To view more than one data option in the second menu, CTRL-click (or command-click) each dataset to add to the graph.'></select>
    	<select id="chart_type" title='<b>Line vs. bar chart:</b></br>  This menu allows the viewer to select either a line or bar chart to display the data. Note: a line graph here does not represent a series of related values, it is simply another option for visualizing data at a specific administrative level.'>
    	<optgroup label="Chart Type">
    		
@@ -113,14 +113,14 @@
       <option value=1>Line Chart</option>
    	</optgroup>
    	</select> 
-      <select id="sort" title='<b>Sorting order:</b></br> This menu has three options for the data order: by geographical region, ascending order or descending order. Note: the “region” option is how Tunisia’s electoral management body, the ISIE, organizes its results - according to geographical region and in this order: greater Tunis, north east, north west, center west, center east, south east, south west.'>
+      <select id="sort" title='<b>Sorting order:</b></br> This menu has three options for the data order: by geographical region, ascending order or descending order. Note: the “region” option is how Tunisia’s electoral management body, the ISIE, organizes its results - according to geographical region and in this order: greater Tunis, north east, north west, center east, center west, south east, south west.'>
       <optgroup label="Sorting Order">
          <option value=1>By Regions</option>
          <option value=2>Ascending</option>
          <option value=3>Descending</option>
       </optgroup>
       </select>
-      <select id="level" title='<b>Administrative or electoral level:</b></br> the fifth menu has different options for different datasets. For all election results, one can view data at the administrative district level (governorates) or the electoral district level (circonscriptions). There are 24 governorates in Tunisia and 27 circonscriptions (three governorates are divided into two as circonscriptions)'>
+      <select id="level" title='<b>Administrative or electoral level:</b></br> the fifth menu has different options for different datasets. For all election results, one can view data at the administrative district level (governorates) or the electoral district level (circonscriptions). There are 24 governorates in Tunisia and 27 circonscriptions (three governorates are divided into two as circonscriptions).'>
       <optgroup label="Show Level">
          
          <option value=2>Electoral Level</option>
@@ -186,7 +186,7 @@
     <h1>Overview</h1>
     <span>+</span>
     <div class="panel">
-      <h5>The charts section allows the viewer to compare and contrast Tunisia's latest election-related data as well as socio-economic data. Two charts have been provided in order for related data from different sources can be displayed simultaneously for the purpose of comparison and possible correlation.</br></br>This charts section does not attempt to analyze these datasets or suggest correlations. It is a platform for the public to interact with various datasets and draw one's own conclusion about the relationships that do or do not exist. </br></br></h5>
+      <h5>The charts section allows the viewer to compare and contrast Tunisia’s latest election-related data as well as socio-economic data. Two charts have been provided in order for related data from different sources can be displayed simultaneously for the purpose of comparison and determining possible correlations.</br></br>This charts section does not attempt to analyze these datasets or suggest correlations. It is a platform for the public to interact with various datasets and draw one’s own conclusion about the relationships that do or do not exist. </br></br></h5>
     </div>
   </li>
    <li>
@@ -200,28 +200,28 @@
     <h1>Y-axis value</h1>
     <span>+</span>
     <div class="panel">
-      <h5>When comparing data between charts, please keep in mind the percentage value on the Y-axis will depend on the dataset and therefore may vary from one chart to another; please be aware this can affect whether or not there is a perceived correlation.</br></br></h5>
+      <h5>when comparing data between charts, please keep in mind the percentage value on the Y-axis will depend on the dataset and therefore may vary from one chart to another; please be aware this can affect whether or not there is a perceived correlation.</br></br></h5>
     </div>
   </li>
   <li>
     <h1>Timing of data collection</h1>
     <span>+</span>
     <div class="panel">
-      <h5>The socio-economic data was collected in 2009, whereas the election results are from 2011. Please remember that socio-economic data changes from year to year and therefore does not reflect the exact population statistics of the 2011 elections.</br></br></h5>
+      <h5>The socio-economic data was collected in 2009, whereas the election results are from 2011. Please remember that socio-economic data changes from year to year and therefore does not reflect the exact population statistics of the 2011 elections. </br></br></h5>
     </div>
   </li>
   <li>
     <h1>Population size</h1>
     <span>+</span>
     <div class="panel">
-      <h5>Election results are drawn from a population of citizens 18 years and older (those who are eligible to vote). for the socio-economic data, the underlying population size varies according to the type of data. For example, the "youth ratio" dataset refers to the percentage per governorate of young people between 15-34 in 2009 (need to check).  The following age ranges apply for these datasets: unemployment, illiteracy. Then define how big a household is.</br></br></h5>
+      <h5>Election results are drawn from a population of citizens 18 years and older (those who are eligible to vote). For the socio-economic data, the underlying population size varies according to the type of data. For example, the “youth ratio” dataset refers to the percentage per governorate of young people between 15-34 in 2009. Unemployment and illiteracy rates refer to Tunisians 15 years and older. Note: all communications data (mobile, internet and computer coverage) is measured at the household level, with a household defined as, on average, 4.21 people.</br></br></h5>
     </div>
   </li>
   <li>
     <h1>Communications data</h1>
     <span>+</span>
     <div class="panel">
-      <h5>The socio-economic data provided about mobile, internet and computer coverage is measured at the household - not individual - level. (more data and definitions here)</br></br></h5>
+      <h5>Internet access refers to households with at least one member using the Internet either at home or outside. Note that these statistics were collected before Tunisia had 3G internet access.</br></br></h5>
     </div>
   </li>
   <li>
@@ -235,7 +235,7 @@
     <h1>Data sources</h1>
     <span>+</span>
     <div class="panel">
-      <h5>These Datasets were collected from the ISIE (Instance Superieure Indépendante pour les Elections) official website and/or from the INS (Institut National des Statistiques) website.</br></br></h5>
+      <h5>The charts section displays two types of data: election results and socio-economic data. These datasets are sourced from the following websites and documents:</br></br>Election results: originally obtained from the <a href='http://www.isie.tn/Ar/image.php?id=762' style="color:#FE2E2E" target='_blank'>National Constituent Assembly Report on the Elections</a>, published by the Independent High Commission for the Elections (ISIE) in February 2012 and converted to CSV by <a style="color:#FE2E2E" href='http://www.opengov.tn/ar/' target='_blank'>OpenGovTn</a></br></br>Socio-economic data: the data used in the charts section is obtained from the National Survey and Housing 2009. It was the last nationwide survey that The National Institute of Statistics (INS) completed. The sample included nearly 162 500 households representative of the entire households distributed over 6500 counties in different governorates, cities, villages and rural areas. </br></br>The INS website has only one URL for all its online data. Therefore, to view the 2009 survey, follow this pathway: go to the <a style="color:#FE2E2E" href='http://www.ins.nat.tn/indexen.php' target='_blank'>INS website</a> > Publications > results of the last surveys > National Survey on population and housing 2009.</br></br>To download a complete dataset of the socio-economic data displayed in the charts section, click here. To download all elections results and socio-economic data displayed in the charts section, click <a style="color:#FE2E2E" href="../data/INS_DATA.xlsx">here</a>.</h5></br></br>
     </div>
   </li>
   

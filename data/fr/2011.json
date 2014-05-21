@@ -23,6 +23,17 @@
         "picture": "img/projects/nahdha.png", 
         "map": "tunisia.map-u3z7fdnm,mehdi118218.i28dggil"
     },
+    {   "_id": "4",
+        "lang": "fr", "learn":" Lire la suite",
+        "title": "Résultats du CPR aux élections de 2011",
+        "subtitle": "Parti politique et le soutien de la coalition",
+        "excerpt": "Cette carte offre une visualisation de la densité de soutien du CPR (Congrès Pour la République) au niveau des différentes circonscriptions pendant les élections de l'Assemblée Nationale Constituante de 2011. Le CPR a gagné la deuxième place en nombre de sièges à l’ANC avec 29 sièges après Ennahdha et devançant la Pétition populaire (Aridha) avec 3 sièges de plus. Le CPR a reçu son plus grand pourcentage de vote à Kébili avec 26,71% suivi par Nabeul et Sfax avec 14,19% et 13,02%...",
+        "description": "<h3>Description</h3>Cette carte offre une visualisation de la densité de soutien du CPR (Congrès Pour la République) au niveau des différentes circonscriptions pendant les élections de l'Assemblée Nationale Constituante de 2011. Le CPR a gagné la deuxième place en nombre de sièges à l’ANC avec 29 sièges après Ennahdha et devançant la Pétition populaire (Aridha) avec 3 sièges de plus. Le CPR a reçu son plus grand pourcentage de vote à Kébili avec 26,71% suivi par Nabeul et Sfax avec 14,19% et 13,02% ; par contre le plus faible pourcentage a été enregistré à Sidi Bouzid ; généralement les résultats de vote semblent en avantage du CPR dans les régions dominées par Ennahdha plutôt que celles dominées par El Aridha.",
+        "about_data": "",
+        "methodology": "",
+        "picture": "img/projects/cpr.png", 
+        "map": "tunisia.map-u3z7fdnm,mehdi118218.i28cl4na"
+    },
     {   "_id": "2",
         "lang": "fr", "learn":" Lire la suite",
         "title": "Résultats d'Al Aridha aux élections de 2011",
@@ -45,17 +56,7 @@
         "picture": "img/projects/ETTAKATOL.png", 
         "map": "tunisia.map-u3z7fdnm,mehdi118218.i28cp8i3"
     },
-    {   "_id": "4",
-        "lang": "fr", "learn":" Lire la suite",
-        "title": "Résultats du CPR aux élections de 2011",
-        "subtitle": "Parti politique et le soutien de la coalition",
-        "excerpt": "Cette carte offre une visualisation de la densité de soutien du CPR (Congrès Pour la République) au niveau des différentes circonscriptions pendant les élections de l'Assemblée Nationale Constituante de 2011. Le CPR a gagné la deuxième place en nombre de sièges à l’ANC avec 29 sièges après Ennahdha et devançant la Pétition populaire (Aridha) avec 3 sièges de plus. Le CPR a reçu son plus grand pourcentage de vote à Kébili avec 26,71% suivi par Nabeul et Sfax avec 14,19% et 13,02%...",
-        "description": "<h3>Description</h3>Cette carte offre une visualisation de la densité de soutien du CPR (Congrès Pour la République) au niveau des différentes circonscriptions pendant les élections de l'Assemblée Nationale Constituante de 2011. Le CPR a gagné la deuxième place en nombre de sièges à l’ANC avec 29 sièges après Ennahdha et devançant la Pétition populaire (Aridha) avec 3 sièges de plus. Le CPR a reçu son plus grand pourcentage de vote à Kébili avec 26,71% suivi par Nabeul et Sfax avec 14,19% et 13,02% ; par contre le plus faible pourcentage a été enregistré à Sidi Bouzid ; généralement les résultats de vote semblent en avantage du CPR dans les régions dominées par Ennahdha plutôt que celles dominées par El Aridha.",
-        "about_data": "",
-        "methodology": "",
-        "picture": "img/projects/cpr.png", 
-        "map": "tunisia.map-u3z7fdnm,mehdi118218.i28cl4na"
-    },
+    
     {   "_id": "5",
         "lang": "fr", "learn":" Lire la suite",
         "title": "Résultats du PDP aux élections de 2011",

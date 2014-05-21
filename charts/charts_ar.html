@@ -98,23 +98,23 @@
 </div>  <!--header inner  ends  --> 
 
 <div dir="rtl" style="height:'100%' ;  background-color:#FFF ; padding:20px">
-	<select id="first_select" title="<p align='right'><b>Dataset options:</b></br>For each chart, one may choose from three dataset options: political party results, other election results, and socio-economic data. </p>"></select>
-   	<select  multiple="multiple"  id="second_select" title='<p align="right"><b>Dataset combinations:</b></br>This menu displays data from the same source as the first dataset. For example, if you select "blank ballots" in the first menu, related datasets that share the same source will appear in the second menu: cancelled ballots and wasted ballots. It is possible to view one or all of the data options in the second menu.</p>'></select>
-   	<select id="chart_type" title='<p align="right"><b>Line vs. bar chart:</b></br>  This menu allows the viewer to select either a line or bar chart to display the data. Note: a line graph here does not represent a series of related values, it is simply another option for visualizing data at a specific administrative level.</p>'>
+	<select id="first_select" title="<p align='right'><b>اختيار  البيانات</b></br>يمكن الاختيار من بين ثلاثة عناصر: نتائج الأحزاب السياسية, نتائج انتخابية أخرى, والبيانات الاقتصادية والاجتماعية</p>"></select>
+   	<select  multiple="multiple"  id="second_select" title='<p align="right"><b>بيانات من نفس السياق </b></br>تعرض هذا القائمة البيانات من المصدر نفسه. على سبيل المثال، باختيار   "أوراق الاقتراع البيضاء" في القائمة الأولى، تظهر في القائمة الثانية بيانات من نفس المصدر  :الأوراق الملغاة  وأوراق الاقتراع  الضائعة. من الممكن أيضاً رؤية  البيانات المتعلقة بنفس المصدر  في القائمة الثانية</p>'></select>
+   	<select id="chart_type" title='<p align="right"><b>الرسوم  البيانية الخطية والرسوم البيانية الشريطية</b></br>تمكن هذه القائمة من الاختيار  بين  الرسوم  البيانية الخطية والرسوم البيانية الشريطية  لعرض البيانات. ملاحظة:   يمثل رسم بياني خطي  هنا خيار آخر لتصور البيانات على مستوى الولايات أو الدوار الانتخابية على سبيل الذكر</p>'>
    	<optgroup label="نوع الرسم البياني">
    		
    		<option value=2>أعمدة</option>
       <option value=1>خطوط</option>
    	</optgroup>
    	</select> 
-      <select id="sort" title='<p align="right"><b>Sorting order:</b></br> This menu has three options for the data order: by geographical region, ascending order or descending order. Note: the “region” option is how Tunisia’s electoral management body, the ISIE, organizes its results - according to geographical region and in this order: greater Tunis, north east, north west, center west, center east, south east, south west.</p>'>
+      <select id="sort" title='<p align="right"><b>ترتيب البيانات</b></br>هذه القائمة لديها ثلاثة خيارات لترتيب البيانات: حسب المنطقة، سواء حسب الترتيب التصاعدي أو  التنازلي. ملاحظة: الخيار  " حسب الجهات "  هو الترتيب الذي اعتمدته  هيئة الهيئة العليا المستقلة للانتخابات ، و  ذلك  وفقا للمنطقة الجغرافية : تونس الكبرى، الشمال الشرقي، الشمال الغربي، الوسط الشرقي ، الوسط  الغربي ، الجنوب الشرقي، الجنوب الغربي </p>'>
       <optgroup label="ترتيب البيانات">
          <option value=1>حسب الجهات</option>
          <option value=2>تنازلي</option>
          <option value=3>تصاعدي</option>
       </optgroup>
       </select>
-      <select id="level"  title='<p align="right"><b>Administrative or electoral level:</b></br> the fifth menu has different options for different datasets. For all election results, one can view data at the administrative district level (governorates) or the electoral district level (circonscriptions). There are 24 governorates in Tunisia and 27 circonscriptions (three governorates are divided into two as circonscriptions)</p>'>
+      <select id="level"  title='<p align="right"><b>المستوى الإداري أو الانتخابي </b></br>القائمة الخامسة لديها خيارات مختلفة لمجموعة البيانات المختلفة. بالنسبة لجميع نتائج الانتخابات، يمكن عرض البيانات على مستوى الولاية   أو على مستوى الدائرة الانتخابية. هناك 24 ولاية  في تونس و 27 دائرة انتخابية - تم تقسيم  ثلاث ولايات إلى دائرتين انتخابيتين   </p>'>
       <optgroup label="عرض البيانات">
          
          <option value=2>حسب الدوائر الإنتخابية</option>
@@ -169,65 +169,66 @@
 <div id="description-dash" class="dash-right dash-right-vertical dash-right-right" style="top:55px;padding-top: 0;">
 <span id="notes_h1"><h3>معلومات</h3></span></br>
 
-<span id="notes_text">Note the following details and exceptions when viewing data in the charts section.</span></br></br>
+<span id="notes_text">يجب ملاحظة التفاصيل و الاستثناءات التالية عند التمعن في البيانات في قسم الخرائط </span></br></br>
 
 
 <ul id="toggle-view">
   <li>
-    <h1>Overview</h1>
-    <span>+</span>
+    <h1>نظرة عامة</h1>
+    
     <div class="panel">
-      <h5>The charts section allows the viewer to compare and contrast Tunisia's latest election-related data as well as socio-economic data. Two charts have been provided in order for related data from different sources can be displayed simultaneously for the purpose of comparison and possible correlation.</br></br>This charts section does not attempt to analyze these datasets or suggest correlations. It is a platform for the public to interact with various datasets and draw one's own conclusion about the relationships that do or do not exist. </br></br></h5>
+      <h5>تمكن الرسوم البيانية من  مقارنة أحدث البيانات الانتخابية في تونس ، فضلا عن البيانات الاقتصادية والاجتماعية. وقد تم تقديم اثنين من الرسوم البيانية لتمكين  عرض البيانات الواردة  من مصادر مختلفة في  نفس الوقت لغرض المقارنة و احتمال وجود ترابط بينها</br></br>ليس الغرض من  قسم الرسوم البيانية هذا  تحليل البيانات هذه إنما  هو منصة للتفاعل مع مختلف  البيانات لاستخلاص استنتاجات ممكنة </br></br></h5>
     </div>
   </li>
    <li>
-    <h1>Datasets with different boundaries</h1>
-    <span>+</span>
+    <h1> بيانات حسب مختلف التقسيمات الجغرافية</h1>
+    
     <div class="panel">
-      <h5>Socio-economic data is gathered at the governorate level, unlike election results that are reported at the circonscription level. While election results can be displayed here at either level, socio-economic data and cannot be viewed at the circonscription level; please keep this in mind when comparing with election results at the circonscription level.</br></br></h5>
+      <h5>يتم جمع البيانات الاجتماعية والاقتصادية على مستوى الولاية  ، على عكس نتائج الانتخابات التي جمعت  على مستوى الدوائر الانتخابية. يمكن عرض نتائج الانتخابات على مستوى الولايات  أو الدوائر الانتخابية،  في حين لا يمكن عرض البيانات الاجتماعية و الاقتصادية إلا على مستوى الدوائر الانتخابية؛ يجب أخذ هذا بعين الاعتبار عند المقارنة بنتائج الانتخابات على مستوى الدوائر الانتخابية</br></br></h5>
     </div>
   </li>
 <li>
-    <h1>Y-axis value</h1>
-    <span>+</span>
+    <h1>المحور العمودي</h1>
+    
     <div class="panel">
-      <h5>When comparing data between charts, please keep in mind the percentage value on the Y-axis will depend on the dataset and therefore may vary from one chart to another; please be aware this can affect whether or not there is a perceived correlation.</br></br></h5>
+      <h5>عند مقارنة البيانات بين الرسوم البيانية، يرجى الأخذ بعين الاعتبار  أن قيمة النسبة المئوية على المحور العمودي تعتمد على البيانات نفسها، وبالتالي قد تختلف من رسم بياني إلى آخر</br></br></h5>
     </div>
   </li>
   <li>
-    <h1>Timing of data collection</h1>
-    <span>+</span>
+    <h1>تاريخ جمع البيانات </h1>
+    
     <div class="panel">
-      <h5>The socio-economic data was collected in 2009, whereas the election results are from 2011. Please remember that socio-economic data changes from year to year and therefore does not reflect the exact population statistics of the 2011 elections.</br></br></h5>
+      <h5>تم جمع البيانات الاجتماعية والاقتصادية في عام 2009، في حين تعود  نتائج الانتخابات إلى  عام 2011 الرجاء اعتبار  التغييرات في  البيانات الاجتماعية والاقتصادية من سنة إلى أخرى، وبالتالي فهي  لا تعكس الإحصاءات السكانية الدقيقة لانتخابات 2011</br></br></h5>
     </div>
   </li>
   <li>
-    <h1>Population size</h1>
-    <span>+</span>
+    <h1>عدد السكان </h1>
+    
     <div class="panel">
-      <h5>Election results are drawn from a population of citizens 18 years and older (those who are eligible to vote). for the socio-economic data, the underlying population size varies according to the type of data. For example, the "youth ratio" dataset refers to the percentage per governorate of young people between 15-34 in 2009 (need to check).  The following age ranges apply for these datasets: unemployment, illiteracy. Then define how big a household is.</br></br></h5>
+      <h5>تستخرج نتائج الانتخابات بالرجوع إلى عدد  السكان الذي يبلغ عمرهم  18 سنة فما فوق ( الذين يحق لهم التصويت ). بالنسبة للبيانات الاجتماعية والاقتصادية  فإن حجم السكان الأساسية يختلف وفقا لنوع البيانات. على سبيل المثال، تشير البيانات المتعلقة ب- "نسبة الشباب  "  إلى النسبة المئوية في كل ولاية   للشباب ما  بين 15-34 في عام 2009. تطبق  هذه الشرائح  العمرية التالية على البيانات المتعلقة بالبطالة والأمية</br></br></h5>
     </div>
   </li>
   <li>
-    <h1>Communications data</h1>
-    <span>+</span>
+    <h1>البيانات المتعلقة بالاتصالات</h1>
+    
     <div class="panel">
-      <h5>The socio-economic data provided about mobile, internet and computer coverage is measured at the household - not individual - level. (more data and definitions here)</br></br></h5>
+      <h5>يتم قياس البيانات الاجتماعية والاقتصادية المقدمة المتعلقة بامتلاك الهاتف الجوال و الكمبيوتر والانترنت على  مستوى الأسرة و ليس الفرد</br></br></h5>
     </div>
   </li>
   <li>
-    <h1>Voters abroad</h1>
-    <span>+</span>
+    <h1>التصويت للتونسيين بالخارج</h1>
+    
     <div class="panel">
-      <h5>There are 6 circonscriptions outside of Tunisia for Tunisians voting abroad; these results are not incorporated into the data presented in this section.</br></br></h5>
+      <h5> هناك 6 دوائر انتخابية  للتصويت في الخارج؛ لا يتم تضمين هذه النتائج في البيانات المقدمة في هذا القسم</br></br></h5>
     </div>
   </li>
   <li>
-    <h1>Data sources</h1>
-    <span>+</span>
+    <h1>مصادر البيانات</h1>
+   
     <div class="panel">
-      <h5>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.</br></br></h5>
+      <h5>هذه البيانات متحصل عليها من الموقع الرسمي للهيئة العليا المستقلة للإنتخابات و من الموقع الرسمي للمعهد الوطني للإحصاء</br></br></h5>
     </div>
+     
   </li>
   
 </ul>

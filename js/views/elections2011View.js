@@ -17,13 +17,15 @@ function(ItemView,viz){
           var desc_ar = '<div class="story-main-space lang-ar"  style="min-height: 100px;"><div class="col-lg-12 col-md-12 col-sm-12"><span style="font-size:30;font-family: Helve;color: white;vertical-align:-35px;">ملخص الانتخابات التونسية 2011</span><a style="float:left" class="button" href="#2011/14"><h4>المزيد</h4></a></div></div>' ;
                   
                   $(this.el).empty(); 
+                  //append the summary
+                 /*
                   if (window.tnelec.router.language=="fr") 
                     $(this.el).append(desc_fr);
                   else if (window.tnelec.router.language=="ar") 
                   $(this.el).append(desc_ar);
                   else
                   $(this.el).append(desc);
-                  
+                  */
                   
 
                   var electionItems = this.model.models;
